@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPM &amp; Chronic Care | VitalWeave® Proactive Remote Patient Monitoring</title>
+  <meta name="description" content="VitalWeave enables continuous patient monitoring, timely alerts, and connected health insights to support proactive chronic care from hospital to home.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=Outfit:wght@200;300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="rpm-page">
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="VitalWeave Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+        </div>
+        <span class="brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Products with Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active-nav" id="productsDropdownBtn" aria-expanded="false" aria-haspopup="true">
+              Products
+              <svg class="dropdown-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" id="productsDropdownMenu" role="menu" aria-labelledby="productsDropdownBtn">
+              <a href="index.html#overview" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <img src="assets/overview-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">VitalWeave Device</span>
+                  <span class="dropdown-item-desc">Wearable real-time biosensing cuff</span>
+                </div>
+              </a>
+              <a href="rpm-chronic-care.html" class="dropdown-item current-page" role="menuitem">
+                <div class="dropdown-item-icon rpm-icon-bg">
+                  <img src="assets/rpm-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">RPM &amp; Chronic Care</span>
+                  <span class="dropdown-item-desc">Continuous proactive patient monitoring</span>
+                </div>
+              </a>
+              <a href="sleep-apnea.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon sleep-icon-bg">
+                  <img src="assets/sleep-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Sleep Apnea</span>
+                  <span class="dropdown-item-desc">Clinical-grade at-home sleep testing</span>
+                </div>
+              </a>
+              <a href="cardiovascular-ecg.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon ecg-icon-bg">
+                  <img src="assets/ecg-hero-woman.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Cardiovascular ECG</span>
+                  <span class="dropdown-item-desc">Extended ECG telemetry &amp; AI insights</span>
+                </div>
+              </a>
+              <a href="ai-ml-digital-twin.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon aiml-icon-bg">
+                  <img src="assets/aiml-card-1.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">AI/ML &amp; Digital Twin</span>
+                  <span class="dropdown-item-desc">Intelligent health insights &amp; digital twin models</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+          <li><a href="#outcomes" class="nav-link">Outcomes</a></li>
+          <li><a href="index.html#faq" class="nav-link">Resources</a></li>
+          <li><a href="#footer" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#footer" class="btn btn-header" id="getInTouchBtn">Get in Touch</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle is-active" id="mobileProductsToggle" aria-expanded="true">
+            <span>Products</span>
+            <svg class="mobile-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu is-open" id="mobileProductsMenu">
+            <a href="index.html#overview" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">VitalWeave Device</span>
+              <span class="mobile-dropdown-sub">Wearable Vital Signs Monitor</span>
+            </a>
+            <a href="rpm-chronic-care.html" class="mobile-dropdown-item current">
+              <span class="mobile-dropdown-title">RPM &amp; Chronic Care</span>
+              <span class="mobile-dropdown-sub">Proactive Monitoring Platform</span>
+            </a>
+            <a href="sleep-apnea.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Sleep Apnea</span>
+              <span class="mobile-dropdown-sub">Clinical-Grade Sleep Testing</span>
+            </a>
+            <a href="cardiovascular-ecg.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Cardiovascular ECG</span>
+              <span class="mobile-dropdown-sub">Extended ECG Monitoring</span>
+            </a>
+            <a href="ai-ml-digital-twin.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">AI/ML &amp; Digital Twin</span>
+              <span class="mobile-dropdown-sub">Intelligent Digital Twin &amp; Analysis</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#use-cases" class="mobile-nav-link">Use Cases</a></li>
+        <li><a href="#outcomes" class="mobile-nav-link">Outcomes</a></li>
+        <li><a href="index.html#faq" class="mobile-nav-link">Resources</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Company</a></li>
+        <li class="mobile-action-item">
+          <a href="#footer" class="btn btn-primary btn-mobile-cta">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="rpm-hero-section" id="hero">
+      <div class="rpm-hero-container">
+        
+        <!-- Hero Header Row -->
+        <div class="rpm-hero-top-row">
+          
+          <!-- Left Column -->
+          <div class="rpm-hero-left">
+            <span class="rpm-hero-badge">REMOTE PATIENT CARE</span>
+            <h1 class="rpm-hero-headline-left">
+              <strong>Proactive Chronic Care,</strong><br>
+              <span class="font-light">Connected Beyond</span><br>
+              <span class="font-light">The Clinic.</span>
+            </h1>
+            
+            <div class="rpm-hero-cta-group">
+              <a href="#footer" class="btn btn-rpm-white">
+                Get in Touch
+              </a>
+              <a href="index.html#overview" class="btn btn-rpm-outline">
+                Explore Products
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="rpm-hero-right">
+            <h2 class="rpm-hero-main-title">RPM &amp; Chronic Care</h2>
+            <p class="rpm-hero-lead-text">
+              VitalWeave enables continuous patient monitoring, timely alerts, and connected health insights to support proactive chronic care from hospital to home.
+            </p>
+            <div class="rpm-hero-status-dots">
+              <img src="assets/icon-tagline-dots.svg" alt="Indicator status lights" class="status-dots-svg">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Hero Showcase Cards -->
+        <div class="rpm-hero-cards-grid">
+          
+          <!-- Card 1: Armband Device -->
+          <div class="rpm-hero-card rpm-card-device">
+            <div class="rpm-card-inner">
+              <img src="assets/rpm-hero-device.png" alt="VitalWeave arm monitor device" class="rpm-card-img">
+            </div>
+          </div>
+
+          <!-- Card 2: Patient Wearing Monitor -->
+          <div class="rpm-hero-card rpm-card-patient">
+            <div class="rpm-card-inner">
+              <img src="assets/rpm-hero-patient.png" alt="Patient wearing VitalWeave monitor comfortably at home" class="rpm-card-img">
+            </div>
+          </div>
+
+          <!-- Card 3: Dashboard & Mobile App -->
+          <div class="rpm-hero-card rpm-card-dashboard">
+            <div class="rpm-card-inner">
+              <img src="assets/rpm-hero-dashboard.png" alt="Clinical dashboard on laptop and mobile screen" class="rpm-card-img">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. SOLUTION SECTION -->
+    <section class="rpm-solution-section" id="solution">
+      <div class="section-container">
+        
+        <div class="rpm-solution-grid">
+          
+          <!-- Left Details -->
+          <div class="rpm-solution-text-content">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">Solution</span>
+            </div>
+
+            <h2 class="rpm-solution-heading">
+              <span class="font-medium">Smarter Chronic Care Through</span><br class="desktop-br">
+              <strong class="font-bold">Remote Patient Monitoring</strong>
+            </h2>
+
+            <p class="rpm-solution-desc">
+              Chronic Conditions Require More Than Occasional Clinic Visits. VitalWeave Connects Patients, Healthcare Teams, And Health Data To Support Continuous Monitoring And Proactive Care. From Collecting Vital Measurements To Identifying Meaningful Changes, The Platform Helps Care Teams Stay Informed And Respond When Patients Need Attention.
+            </p>
+          </div>
+
+          <!-- Right Image Card -->
+          <div class="rpm-solution-visual">
+            <div class="rpm-solution-image-card">
+              <img src="assets/rpm-solution-patient-raw.png" alt="Patient comfortably using VitalWeave remote health monitor" class="rpm-solution-img">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. PRODUCT ECOSYSTEM / 3 PILLAR CARDS SECTION -->
+    <section class="rpm-ecosystem-section" id="ecosystem">
+      <div class="section-container">
+        
+        <!-- Pill Badge -->
+        <div class="section-pill-badge rpm-ecosystem-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">PRODUCT ECOSYSTEM</span>
+        </div>
+
+        <!-- Header Split -->
+        <div class="rpm-ecosystem-header">
+          <h2 class="rpm-ecosystem-heading">
+            From Remote Monitoring<br>
+            <span class="font-light">To Proactive Care</span>
+          </h2>
+          <p class="rpm-ecosystem-desc">
+            VitalWeave Connects Remote Health Monitoring With Clinical Workflows To Help Providers Deliver Continuous, Personalized, And Proactive Chronic Care.
+          </p>
+        </div>
+
+        <!-- 3 Feature Pillar Cards Grid -->
+        <div class="rpm-pillar-cards-grid">
+          
+          <!-- Pillar Card 1: Continuous Patient Monitoring -->
+          <div class="rpm-pillar-card">
+            <img src="assets/rpm-card-monitoring.png" alt="Continuous Patient Monitoring - Track vital measurements from home, helping healthcare teams stay informed about health between visits" class="rpm-pillar-img">
+          </div>
+
+          <!-- Pillar Card 2: Real-Time Health Insights -->
+          <div class="rpm-pillar-card">
+            <img src="assets/rpm-card-insights.png" alt="Real-Time Health Insights - Identify meaningful changes in patient measurements and bring potential concerns to care teams sooner" class="rpm-pillar-img">
+          </div>
+
+          <!-- Pillar Card 3: Personalized Care Insights -->
+          <div class="rpm-pillar-card">
+            <img src="assets/rpm-card-care.png" alt="Personalized Care Insights - Combine patient measurements and health trends to help providers understand needs and plan follow-up" class="rpm-pillar-img">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. JOURNEY SECTION -->
+    <section class="rpm-journey-section" id="journey">
+      <div class="section-container">
+        
+        <div class="rpm-journey-header">
+          <div class="section-pill-badge">
+            <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+            <span class="badge-text">Journey</span>
+          </div>
+          <h2 class="section-heading">The RPM &amp; Chronic Care Journey</h2>
+        </div>
+
+        <div class="rpm-journey-layout">
+          
+          <!-- Left Visual Image -->
+          <div class="rpm-journey-visual-col">
+            <div class="rpm-journey-card-frame">
+              <img src="assets/rpm-journey-wear.png" alt="Patient putting on VitalWeave monitor comfortably" class="rpm-journey-img">
+            </div>
+          </div>
+
+          <!-- Right 2x2 Step Matrix -->
+          <div class="rpm-journey-steps-grid">
+            
+            <!-- Step 1: WEAR -->
+            <div class="rpm-step-card">
+              <span class="rpm-step-action-tag">WEAR</span>
+              <h3 class="rpm-step-title">Comfortable Monitoring</h3>
+              <p class="rpm-step-desc">
+                Patients wear VitalWeave devices to capture essential health measurements during daily routines.
+              </p>
+            </div>
+
+            <!-- Step 2: CONNECT -->
+            <div class="rpm-step-card">
+              <span class="rpm-step-action-tag">CONNECT</span>
+              <h3 class="rpm-step-title">Connected Health Data</h3>
+              <p class="rpm-step-desc">
+                Bring patient measurements together to give care teams a clearer view of health.
+              </p>
+            </div>
+
+            <!-- Step 3: MEASURE -->
+            <div class="rpm-step-card">
+              <span class="rpm-step-action-tag">MEASURE</span>
+              <h3 class="rpm-step-title">Continuous Health Visibility</h3>
+              <p class="rpm-step-desc">
+                Track patient Vitals regularly and maintain visibility between clinical visits.
+              </p>
+            </div>
+
+            <!-- Step 4: ANALYSE -->
+            <div class="rpm-step-card">
+              <span class="rpm-step-action-tag">ANALYSE</span>
+              <h3 class="rpm-step-title">Meaningful Health Insights</h3>
+              <p class="rpm-step-desc">
+                Review patient data to identify meaningful changes and emerging health trends.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. OUTCOMES SECTION (CLINICAL MATRIX TABLE) -->
+    <section class="rpm-outcomes-section" id="outcomes">
+      <div class="section-container">
+        
+        <!-- Header -->
+        <div class="rpm-outcomes-header">
+          <div class="section-pill-badge">
+            <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+            <span class="badge-text">Outcomes</span>
+          </div>
+          <h2 class="rpm-outcomes-title">A Better Way To Manage Chronic Care</h2>
+          <p class="rpm-outcomes-subtitle">A More Practical Approach To Extended Monitoring</p>
+        </div>
+
+        <!-- Clinical Table Component -->
+        <div class="rpm-table-wrapper">
+          <div class="rpm-matrix-table" role="table" aria-label="RPM & Chronic Care Capabilities and Outcomes Matrix">
+            
+            <!-- Table Header -->
+            <div class="rpm-table-header-row" role="row">
+              <div class="rpm-table-th th-care-area" role="columnheader">Care Area</div>
+              <div class="rpm-table-th th-capability" role="columnheader">Monitoring Capability</div>
+              <div class="rpm-table-th th-outcome" role="columnheader">What It Helps With</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="rpm-table-body-row" role="row">
+              <div class="rpm-table-td td-care-area" role="cell">
+                <span class="mobile-table-label">Care Area:</span>
+                <strong>Continuous Vitals Monitoring</strong>
+              </div>
+              <div class="rpm-table-td td-capability" role="cell">
+                <span class="mobile-table-label">Monitoring Capability:</span>
+                Pulse rate, blood pressure, and SpO₂ monitoring
+              </div>
+              <div class="rpm-table-td td-outcome" role="cell">
+                <span class="mobile-table-label">What It Helps With:</span>
+                Helps care teams identify changes in heart health and support timely follow-up.
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="rpm-table-body-row" role="row">
+              <div class="rpm-table-td td-care-area" role="cell">
+                <span class="mobile-table-label">Care Area:</span>
+                <strong>Early Health Changes</strong>
+              </div>
+              <div class="rpm-table-td td-capability" role="cell">
+                <span class="mobile-table-label">Monitoring Capability:</span>
+                Continuous monitoring of vital measurements and activity
+              </div>
+              <div class="rpm-table-td td-outcome" role="cell">
+                <span class="mobile-table-label">What It Helps With:</span>
+                Helps identify meaningful changes that may require attention between clinical visits.
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="rpm-table-body-row" role="row">
+              <div class="rpm-table-td td-care-area" role="cell">
+                <span class="mobile-table-label">Care Area:</span>
+                <strong>Chronic Disease Management</strong>
+              </div>
+              <div class="rpm-table-td td-capability" role="cell">
+                <span class="mobile-table-label">Monitoring Capability:</span>
+                Ongoing patient health data and trend monitoring
+              </div>
+              <div class="rpm-table-td td-outcome" role="cell">
+                <span class="mobile-table-label">What It Helps With:</span>
+                Helps providers understand long-term health patterns and personalize care plans.
+              </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="rpm-table-body-row" role="row">
+              <div class="rpm-table-td td-care-area" role="cell">
+                <span class="mobile-table-label">Care Area:</span>
+                <strong>Post-Discharge Monitoring</strong>
+              </div>
+              <div class="rpm-table-td td-capability" role="cell">
+                <span class="mobile-table-label">Monitoring Capability:</span>
+                Connected monitoring from home
+              </div>
+              <div class="rpm-table-td td-outcome" role="cell">
+                <span class="mobile-table-label">What It Helps With:</span>
+                Helps care teams maintain visibility after discharge and support recovery.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. USE CASE SECTION (SOFT LAVENDER) -->
+    <section class="rpm-usecases-section" id="use-cases">
+      <div class="section-container">
+        
+        <!-- Header -->
+        <div class="rpm-usecases-header">
+          <div class="section-pill-badge">
+            <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+            <span class="badge-text">USE CASE</span>
+          </div>
+          <h2 class="section-heading">Enhancing Chronic Care Through RPM Solutions</h2>
+        </div>
+
+        <!-- 2-Column Grid: Doctor Image Left + 4 Feature Cards Right -->
+        <div class="rpm-usecases-layout">
+          
+          <!-- Left Visual Card -->
+          <div class="rpm-usecases-visual">
+            <div class="rpm-doctor-card">
+              <img src="assets/rpm-doctor-laptop.png" alt="Doctor analyzing patient continuous biometric trends on computer" class="rpm-doctor-img">
+            </div>
+          </div>
+
+          <!-- Right 2x2 Features Grid -->
+          <div class="rpm-usecases-grid">
+            
+            <!-- Feature 1: Chronic Disease Management -->
+            <div class="rpm-usecase-item">
+              <div class="rpm-usecase-icon-wrapper">
+                <img src="assets/rpm-icon-chronic.png" alt="Chronic Disease Management" class="rpm-usecase-icon" aria-hidden="true">
+              </div>
+              <h3 class="rpm-usecase-name">Chronic Disease Management</h3>
+              <p class="rpm-usecase-text">
+                Continuously track vital measurements to help healthcare teams manage long-term patient health more effectively.
+              </p>
+            </div>
+
+            <!-- Feature 2: Post-Discharge Monitoring -->
+            <div class="rpm-usecase-item">
+              <div class="rpm-usecase-icon-wrapper">
+                <img src="assets/rpm-icon-discharge.png" alt="Post-Discharge Monitoring" class="rpm-usecase-icon" aria-hidden="true">
+              </div>
+              <h3 class="rpm-usecase-name">Post-Discharge Monitoring</h3>
+              <p class="rpm-usecase-text">
+                Monitor patients at home after discharge and help care teams stay informed during recovery.
+              </p>
+            </div>
+
+            <!-- Feature 3: Remote Patient Monitoring -->
+            <div class="rpm-usecase-item">
+              <div class="rpm-usecase-icon-wrapper">
+                <img src="assets/rpm-icon-patient.png" alt="Remote Patient Monitoring" class="rpm-usecase-icon" aria-hidden="true">
+              </div>
+              <h3 class="rpm-usecase-name">Remote Patient Monitoring</h3>
+              <p class="rpm-usecase-text">
+                Connect patients and healthcare teams through regular health measurements from compatible monitoring devices.
+              </p>
+            </div>
+
+            <!-- Feature 4: Elderly & Long-Term Care -->
+            <div class="rpm-usecase-item">
+              <div class="rpm-usecase-icon-wrapper">
+                <img src="assets/rpm-icon-elderly.png" alt="Elderly & Long-Term Care" class="rpm-usecase-icon" aria-hidden="true">
+              </div>
+              <h3 class="rpm-usecase-name">Elderly &amp; Long-Term Care</h3>
+              <p class="rpm-usecase-text">
+                Support ongoing health monitoring for patients who need regular observation and continued care.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. IMMERSIVE CTA BANNER SECTION -->
+    <section class="rpm-cta-section" id="cta">
+      <div class="rpm-cta-overlay"></div>
+      <div class="rpm-cta-content">
+        <h2 class="rpm-cta-heading">
+          Build Better Care Around Continuous<br class="desktop-br">
+          Patient Health Insights
+        </h2>
+        <p class="rpm-cta-subheading">
+          Discover Connected VitalWeave Monitoring That Helps Healthcare Teams Track Vital Changes, Support Better Decisions, And Improve Patient Care.
+        </p>
+        
+        <div class="rpm-cta-btn-wrapper">
+          <a href="#footer" class="btn btn-rpm-talk">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER SECTION -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Top Columns Grid -->
+      <div class="footer-main-grid">
+        
+        <!-- Company Info & Social Links -->
+        <div class="footer-brand-column">
+          <div class="footer-logo-wrapper">
+            <img src="assets/footer-logo.png" alt="MG Health Tech Logo" class="footer-logo-img">
+          </div>
+          <p class="footer-mission-text">
+            Making healthcare accessible and accurate through connected, patient-centered technology.
+          </p>
+          
+          <div class="footer-social-links" aria-label="Social Media Links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="social-svg">
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <img src="assets/icon-facebook.svg" alt="Facebook" class="social-svg">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <img src="assets/icon-instagram.svg" alt="Instagram" class="social-svg">
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <img src="assets/icon-youtube.svg" alt="YouTube" class="social-svg">
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Company -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#overview" class="footer-nav-link">About Us</a></li>
+            <li><a href="index.html#overview" class="footer-nav-link">Investors</a></li>
+            <li><a href="index.html#overview" class="footer-nav-link">Events</a></li>
+            <li><a href="index.html#overview" class="footer-nav-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Products -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Products</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#overview" class="footer-nav-link">AroCord</a></li>
+            <li><a href="index.html#overview" class="footer-nav-link">PulmoSens</a></li>
+            <li><a href="index.html#hero" class="footer-nav-link">VitalWeave</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-nav-link active-product">RPM &amp; Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-nav-link">Sleep Apnea</a></li>
+            <li><a href="cardiovascular-ecg.html" class="footer-nav-link">Cardiovascular ECG</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-nav-link">AI/ML &amp; Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Solutions -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Solutions</h4>
+          <ul class="footer-nav-list">
+            <li><a href="rpm-chronic-care.html#solution" class="footer-nav-link">Remote Monitoring</a></li>
+            <li><a href="rpm-chronic-care.html#use-cases" class="footer-nav-link">Chronic Care</a></li>
+            <li><a href="rpm-chronic-care.html#journey" class="footer-nav-link">Patient Engagement</a></li>
+            <li><a href="index.html#faq" class="footer-nav-link">Resources</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Row -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          Copyright &copy; 2026 by MG Health Tech, All right reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

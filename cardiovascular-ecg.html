@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardiovascular ECG - Extended ECG Monitoring | VitalWeave</title>
+  <meta name="description" content="VitalWeave Extended ECG Monitoring helps healthcare teams capture continuous cardiac data, AI-powered rhythm analysis, and actionable insights beyond clinic visits.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+
+  <!-- Google Fonts: Outfit & Satoshi (fallback to Inter/sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ecg-page">
+
+  <!-- =========================================================================
+       1. GLOBAL HEADER / NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="VitalWeave Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+        </div>
+        <span class="brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Products with Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active-nav" id="productsDropdownBtn" aria-expanded="false" aria-haspopup="true">
+              Products
+              <svg class="dropdown-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" id="productsDropdownMenu" role="menu" aria-labelledby="productsDropdownBtn">
+              <a href="index.html#overview" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <img src="assets/overview-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">VitalWeave Device</span>
+                  <span class="dropdown-item-desc">Wearable real-time biosensing cuff</span>
+                </div>
+              </a>
+              <a href="rpm-chronic-care.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon rpm-icon-bg">
+                  <img src="assets/rpm-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">RPM &amp; Chronic Care</span>
+                  <span class="dropdown-item-desc">Continuous proactive patient monitoring</span>
+                </div>
+              </a>
+              <a href="sleep-apnea.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon sleep-icon-bg">
+                  <img src="assets/sleep-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Sleep Apnea</span>
+                  <span class="dropdown-item-desc">Clinical-grade at-home sleep testing</span>
+                </div>
+              </a>
+              <a href="cardiovascular-ecg.html" class="dropdown-item current-page" role="menuitem">
+                <div class="dropdown-item-icon ecg-icon-bg">
+                  <img src="assets/ecg-hero-woman.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Cardiovascular ECG</span>
+                  <span class="dropdown-item-desc">Extended ECG telemetry &amp; AI insights</span>
+                </div>
+              </a>
+              <a href="ai-ml-digital-twin.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon aiml-icon-bg">
+                  <img src="assets/aiml-card-1.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">AI/ML &amp; Digital Twin</span>
+                  <span class="dropdown-item-desc">Intelligent health insights &amp; digital twin models</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#ecosystem" class="nav-link">Features</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#outcomes" class="nav-link">Outcomes</a></li>
+          <li><a href="#usecases" class="nav-link">Use Cases</a></li>
+          <li><a href="#footer" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#footer" class="btn btn-header" id="getInTouchBtn">Get in Touch</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle is-active" id="mobileProductsToggle" aria-expanded="true">
+            <span>Products</span>
+            <svg class="mobile-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu is-open" id="mobileProductsMenu">
+            <a href="index.html#overview" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">VitalWeave Device</span>
+              <span class="mobile-dropdown-sub">Wearable Vital Signs Monitor</span>
+            </a>
+            <a href="rpm-chronic-care.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">RPM &amp; Chronic Care</span>
+              <span class="mobile-dropdown-sub">Proactive Monitoring Platform</span>
+            </a>
+            <a href="sleep-apnea.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Sleep Apnea</span>
+              <span class="mobile-dropdown-sub">Clinical-Grade Sleep Testing</span>
+            </a>
+            <a href="cardiovascular-ecg.html" class="mobile-dropdown-item current">
+              <span class="mobile-dropdown-title">Cardiovascular ECG</span>
+              <span class="mobile-dropdown-sub">Extended ECG Monitoring</span>
+            </a>
+            <a href="ai-ml-digital-twin.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">AI/ML &amp; Digital Twin</span>
+              <span class="mobile-dropdown-sub">Intelligent Digital Twin &amp; Analysis</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
+        <li><a href="#ecosystem" class="mobile-nav-link">Features</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+        <li><a href="#outcomes" class="mobile-nav-link">Outcomes</a></li>
+        <li><a href="#usecases" class="mobile-nav-link">Use Cases</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Company</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="rpm-hero-section ecg-hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Top Split Row -->
+        <div class="rpm-hero-top-row sleep-hero-top-row">
+          
+          <!-- Left Column: Title & Action -->
+          <div class="rpm-hero-main sleep-hero-main">
+            <div class="sleep-hero-badge">
+              ADVANCED CARDIAC MONITORING
+            </div>
+
+            <h1 class="sleep-hero-title">
+              <span class="title-line-1">Extended ECG</span>
+              <span class="title-line-2"><strong>Monitoring</strong> For Clearer</span>
+              <span class="title-line-3">Cardiac Insights.</span>
+            </h1>
+
+            <div class="sleep-hero-btn-group">
+              <a href="#footer" class="btn btn-sleep-primary">Get in Touch</a>
+              <a href="#solutions" class="btn btn-sleep-outline">Explore Products</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Cardiovascular ECG Overview -->
+          <div class="rpm-hero-side-card sleep-hero-side-card">
+            <h2 class="sleep-side-title">Cardiovascular ECG</h2>
+            <p class="sleep-side-desc">
+              Healthcare Providers Can Use VitalWeave To Deliver Extended ECG Monitoring, Reliable Connectivity, And Patient-Centered Insights For Better Cardiac Care.
+            </p>
+            
+            <div class="sleep-hero-moon-phases">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 1 0 22 12H12V2Z" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 0 1 12 22V2Z" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row: 3 Visual Showcase Cards -->
+        <div class="rpm-hero-cards-grid sleep-hero-cards-grid">
+          
+          <!-- Card 1: Woman with Chest Strap -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/ecg-hero-woman.png" alt="Patient at home with wearable ECG chest strap monitor" class="rpm-hero-card-img">
+          </div>
+
+          <!-- Card 2: Athletic Runner with ECG Patch -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/ecg-hero-running.png" alt="Runner exercising outdoors wearing compact ECG patch" class="rpm-hero-card-img">
+          </div>
+
+          <!-- Card 3: Patient on Couch with Telemetry App -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/ecg-hero-couch.png" alt="Patient resting comfortably at home monitoring real-time ECG rhythm" class="rpm-hero-card-img">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SOLUTION SECTION: ADVANCED ECG MONITORING FOR CARDIAC CARE
+         ========================================================================= -->
+    <section class="ecg-solution-section" id="solutions">
+      <div class="section-container">
+        
+        <div class="ecg-solution-grid">
+          
+          <!-- Left Column: Title & Description -->
+          <div class="ecg-solution-left">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">SOLUTION</span>
+            </div>
+
+            <h2 class="ecg-solution-heading">
+              Advanced ECG Monitoring<br>
+              For Cardiac Care
+            </h2>
+
+            <p class="ecg-solution-desc">
+              VitalWeave Combines Wearable ECG Technology, Continuous Monitoring, And Intelligent Analysis To Help Healthcare Providers Capture Cardiac Data Beyond Routine Clinical Visits. From Extended ECG Recording To AI-Assisted Reviews, VitalWeave Helps Identify Relevant Heart Rhythm Patterns, Connect Patient Data, And Support Faster, More Informed Cardiac Care.
+            </p>
+          </div>
+
+          <!-- Right Column: Visual Portrait Card Frame -->
+          <div class="ecg-solution-visual">
+            <div class="ecg-solution-card-frame">
+              <img src="assets/ecg-solution-man.png" alt="Patient wearing VitalWeave ECG chest patch" class="ecg-solution-img">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PRODUCT ECOSYSTEM SECTION: FROM CONTINUOUS ECG TO CLINICAL INSIGHT
+         ========================================================================= -->
+    <section class="ecg-ecosystem-section" id="ecosystem">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">PRODUCT ECOSYSTEM</span>
+        </div>
+
+        <!-- Split Header -->
+        <div class="ecg-ecosystem-header">
+          <h2 class="ecg-ecosystem-heading">
+            From Continuous ECG<br>
+            <span class="ecg-heading-underline">To Clinical Insight</span>
+          </h2>
+          <p class="ecg-ecosystem-lead">
+            VitalWeave Connects Wearable ECG Monitoring, Intelligent Analysis, And Patient Data To Help Healthcare Teams Understand Cardiac Health Beyond Routine Clinical Visits.
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards Grid -->
+        <div class="ecg-features-grid">
+          
+          <!-- Card 1 -->
+          <div class="ecg-feature-card">
+            <img src="assets/figma-card1-full.png" alt="Extended ECG Monitoring: Monitor heart activity continuously over extended periods to capture rhythm changes and cardiac events." class="ecg-feature-card-full-img">
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ecg-feature-card">
+            <img src="assets/figma-card2-full.png" alt="AI-Powered ECG Analysis: Analyze ECG recordings to identify abnormal heart rhythms and highlight important cardiac patterns for clinical review." class="ecg-feature-card-full-img">
+          </div>
+
+          <!-- Card 3 -->
+          <div class="ecg-feature-card">
+            <img src="assets/figma-card3-full.png" alt="Clinical Cardiac Insights: Turn continuous ECG data into clear insights that help clinicians understand heart health and support informed decisions." class="ecg-feature-card-full-img">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. JOURNEY SECTION: THE JOURNEY OF EXTENDED ECG MONITORING
+         ========================================================================= -->
+    <section class="ecg-journey-section" id="journey">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">JOURNEY</span>
+        </div>
+
+        <h2 class="ecg-journey-heading">The Journey Of Extended ECG Monitoring</h2>
+        <p class="ecg-journey-subtitle">
+          Discover A Wearable ECG Monitoring Solution Designed For Extended Cardiac Monitoring, Continuous Heart Rhythm Tracking, And Clearer Clinical Insights.
+        </p>
+
+        <!-- 6 Step Cards Grid -->
+        <div class="ecg-journey-cards-grid">
+          
+          <!-- Step 1 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step1.png" alt="Study Initiation" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">Study Initiation</h3>
+            <p class="ecg-journey-step-desc">
+              Physicians Initiate Cardiac Monitoring Based On Patient Needs And Clinical Requirements.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step2.png" alt="Device Setup" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">Device Setup</h3>
+            <p class="ecg-journey-step-desc">
+              A Wearable ECG Device Is Fitted Or Delivered For Simple Patient-Led Monitoring.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step3.png" alt="Continuous Recording" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">Continuous Recording</h3>
+            <p class="ecg-journey-step-desc">
+              The Device Continuously Captures ECG Data During Daily Activities, Sleep, And Movement.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step4.png" alt="AI Processing" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">AI Processing</h3>
+            <p class="ecg-journey-step-desc">
+              AI Processes ECG Data To Identify Rhythm Patterns And Prioritize Important Events.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step5.png" alt="Clinical Review" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">Clinical Review</h3>
+            <p class="ecg-journey-step-desc">
+              Healthcare Professionals Review ECG Findings And Assess Relevant Cardiac Rhythm Patterns.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="ecg-journey-card">
+            <div class="ecg-journey-icon-wrap">
+              <img src="assets/ecg-journey-step6.png" alt="Report Delivery" class="ecg-journey-icon-img">
+            </div>
+            <h3 class="ecg-journey-step-title">Report Delivery</h3>
+            <p class="ecg-journey-step-desc">
+              Structured Reports Summarize Key Findings To Support Informed Clinical Decision-Making And Care.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. COMPARISON TABLE SECTION: TRADITIONAL VS CONNECTED ECG MONITORING
+         ========================================================================= -->
+    <section class="ecg-comparison-section" id="outcomes">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">OUTCOMES</span>
+        </div>
+
+        <h2 class="ecg-comparison-heading">Traditional vs Connected ECG Monitoring</h2>
+        <p class="ecg-comparison-subtitle">A More Practical Approach To Extended Monitoring</p>
+
+        <!-- Responsive Comparison Table Container -->
+        <div class="ecg-table-wrapper">
+          <table class="ecg-comparison-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Feature</th>
+                <th class="col-traditional">Traditional Holter</th>
+                <th class="col-vitalweave">VitalWeave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-feature">Wear Format</td>
+                <td class="cell-traditional">Multiple ECG Leads Connected To A Separate Recording Device</td>
+                <td class="cell-vitalweave">Lightweight Wearable Device Designed For Comfortable Extended Monitoring</td>
+              </tr>
+              <tr>
+                <td class="cell-feature">Monitoring Period</td>
+                <td class="cell-traditional">Typically Limited To 24–48 Hours Of Recording</td>
+                <td class="cell-vitalweave">Extended Continuous Monitoring For Up To 14 Days*</td>
+              </tr>
+              <tr>
+                <td class="cell-feature">Patient Comfort</td>
+                <td class="cell-traditional">Wires And Equipment May Interfere With Daily Activities</td>
+                <td class="cell-vitalweave">Designed To Support Greater Comfort And Freedom During Everyday Routines</td>
+              </tr>
+              <tr>
+                <td class="cell-feature">Patient Mobility</td>
+                <td class="cell-traditional">Can Be Restrictive During Sleep, Movement, And Daily Activities</td>
+                <td class="cell-vitalweave">Enables Patients To Continue Normal Activities While Being Monitored</td>
+              </tr>
+              <tr>
+                <td class="cell-feature">Data Collection</td>
+                <td class="cell-traditional">Data Generally Stored Locally On The Recording Device</td>
+                <td class="cell-vitalweave">ECG Data Can Be Securely Connected And Transferred Through A Digital Workflow</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. USE CASE SECTION: SUPPORTING CARDIAC MONITORING ACROSS THE CARE JOURNEY
+         ========================================================================= -->
+    <section class="sleep-scenarios-section ecg-usecases-section" id="usecases">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">USE CASE</span>
+        </div>
+
+        <h2 class="sleep-scenarios-heading">Supporting Cardiac Monitoring Across The Care Journey</h2>
+
+        <div class="sleep-scenarios-layout">
+          
+          <!-- Left Visual Card -->
+          <div class="sleep-scenarios-visual">
+            <div class="sleep-scenarios-card-frame">
+              <img src="assets/ecg-usecase-woman.png" alt="Patient monitoring cardiac metrics on sofa" class="sleep-scenarios-img">
+            </div>
+          </div>
+
+          <!-- Right 2x2 Use Case Grid -->
+          <div class="sleep-scenarios-grid">
+            
+            <!-- Item 1: Hospitals -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/ecg-usecase-hospital.png" alt="Hospitals Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">Hospitals</h3>
+              <p class="sleep-scenario-desc">Extend Cardiac Monitoring Beyond<br>Inpatient Settings And Support Post-<br>Discharge Follow-Up For Patients.</p>
+            </div>
+
+            <!-- Item 2: Clinics & Diagnostic Centers -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/ecg-usecase-clinic.png" alt="Clinics & Diagnostic Centers Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">Clinics &amp; Diagnostic Centers</h3>
+              <p class="sleep-scenario-desc">Add Enhanced ECG Monitoring With Simple<br>Workflows For Efficient Diagnostic Service<br>Delivery.</p>
+            </div>
+
+            <!-- Item 3: At-Home Convenience -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/ecg-usecase-home.png" alt="At-Home Convenience Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">At-Home Convenience</h3>
+              <p class="sleep-scenario-desc">Monitor Patients From Home While<br>Keeping Healthcare Teams Connected To<br>Cardiac Data.</p>
+            </div>
+
+            <!-- Item 4: Cardiology Practices -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/ecg-usecase-cardiology.png" alt="Cardiology Practices Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">Cardiology Practices</h3>
+              <p class="sleep-scenario-desc">Support Longer-Duration ECG Studies For<br>Patients Experiencing Intermittent Or<br>Unexplained Cardiac Symptoms.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. IMMERSIVE CTA BANNER SECTION
+         ========================================================================= -->
+    <section class="rpm-cta-section ecg-cta-section" id="cta">
+      <div class="rpm-cta-overlay"></div>
+      <div class="rpm-cta-content">
+        <h2 class="rpm-cta-heading">
+          Build Better Care Around Continuous<br class="desktop-br">
+          Patient Health Insights
+        </h2>
+        <p class="rpm-cta-subheading">
+          Discover Connected VitalWeave Monitoring That Helps Healthcare Teams Track Vital Changes, Support Better Decisions, And Improve Patient Care.
+        </p>
+        
+        <div class="rpm-cta-btn-wrapper">
+          <a href="#footer" class="btn btn-rpm-talk">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       9. GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Top Row: Brand & Links -->
+      <div class="footer-top-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand-column">
+          <a href="index.html" class="footer-logo-link">
+            <div class="footer-logo-icon">
+              <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+            </div>
+            <span class="footer-brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+          </a>
+          <p class="footer-brand-description">
+            Making Healthcare Accessible And Accurate Through Connected Wearable Technology.
+          </p>
+          
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 1: Company -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#about" class="footer-link">About Us</a></li>
+            <li><a href="index.html#investors" class="footer-link">Investors</a></li>
+            <li><a href="index.html#events" class="footer-link">Events</a></li>
+            <li><a href="index.html#careers" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Products -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#overview" class="footer-link">VitalWeave Device</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">RPM &amp; Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Apnea</a></li>
+            <li><a href="cardiovascular-ecg.html" class="footer-link">Cardiovascular ECG</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-link">AI/ML &amp; Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="rpm-chronic-care.html" class="footer-link">Remote Monitoring</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Testing (HSAT)</a></li>
+            <li><a href="index.html#resources" class="footer-link">Resources</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          Copyright &copy; 2026 by MG Health Tech. All rights reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>

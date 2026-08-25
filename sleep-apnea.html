@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Apnea - Clinical-Grade At-Home Sleep Testing | VitalWeave</title>
+  <meta name="description" content="Discover VitalWeave Sleep Apnea solutions. Clinical-grade, at-home sleep testing (HSAT) with continuous SpO2, pulse rate, and motion monitoring for proactive diagnosis.">
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-sleep-apnea rpm-page">
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="VitalWeave Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+        </div>
+        <span class="brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Products with Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active-nav" id="productsDropdownBtn" aria-expanded="false" aria-haspopup="true">
+              Products
+              <svg class="dropdown-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" id="productsDropdownMenu" role="menu" aria-labelledby="productsDropdownBtn">
+              <a href="index.html#overview" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <img src="assets/overview-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">VitalWeave Device</span>
+                  <span class="dropdown-item-desc">Wearable real-time biosensing cuff</span>
+                </div>
+              </a>
+              <a href="rpm-chronic-care.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon rpm-icon-bg">
+                  <img src="assets/rpm-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">RPM &amp; Chronic Care</span>
+                  <span class="dropdown-item-desc">Continuous proactive patient monitoring</span>
+                </div>
+              </a>
+              <a href="sleep-apnea.html" class="dropdown-item current-page" role="menuitem">
+                <div class="dropdown-item-icon sleep-icon-bg">
+                  <img src="assets/sleep-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Sleep Apnea</span>
+                  <span class="dropdown-item-desc">Clinical-grade at-home sleep testing</span>
+                </div>
+              </a>
+              <a href="cardiovascular-ecg.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon ecg-icon-bg">
+                  <img src="assets/ecg-hero-woman.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Cardiovascular ECG</span>
+                  <span class="dropdown-item-desc">Extended ECG telemetry &amp; AI insights</span>
+                </div>
+              </a>
+              <a href="ai-ml-digital-twin.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon aiml-icon-bg">
+                  <img src="assets/aiml-card-1.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">AI/ML &amp; Digital Twin</span>
+                  <span class="dropdown-item-desc">Intelligent health insights &amp; digital twin models</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#scenarios" class="nav-link">Use Cases</a></li>
+          <li><a href="#footer" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#footer" class="btn btn-header" id="getInTouchBtn">Get in Touch</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle is-active" id="mobileProductsToggle" aria-expanded="true">
+            <span>Products</span>
+            <svg class="mobile-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu is-open" id="mobileProductsMenu">
+            <a href="index.html#overview" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">VitalWeave Device</span>
+              <span class="mobile-dropdown-sub">Wearable Vital Signs Monitor</span>
+            </a>
+            <a href="rpm-chronic-care.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">RPM &amp; Chronic Care</span>
+              <span class="mobile-dropdown-sub">Proactive Monitoring Platform</span>
+            </a>
+            <a href="sleep-apnea.html" class="mobile-dropdown-item current">
+              <span class="mobile-dropdown-title">Sleep Apnea</span>
+              <span class="mobile-dropdown-sub">Clinical-Grade Sleep Testing</span>
+            </a>
+            <a href="cardiovascular-ecg.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Cardiovascular ECG</span>
+              <span class="mobile-dropdown-sub">Extended ECG Monitoring</span>
+            </a>
+            <a href="ai-ml-digital-twin.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">AI/ML &amp; Digital Twin</span>
+              <span class="mobile-dropdown-sub">Intelligent Digital Twin &amp; Analysis</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
+        <li><a href="#features" class="mobile-nav-link">Features</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+        <li><a href="#scenarios" class="mobile-nav-link">Use Cases</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Company</a></li>
+        <li class="mobile-action-item">
+          <a href="#footer" class="btn btn-primary btn-mobile-cta">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="rpm-hero-section sleep-hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Top Split Row: Headline on Left, Page Descriptor on Right -->
+        <div class="rpm-hero-top-row sleep-hero-top-row">
+          
+          <!-- Left Column: Title & Action -->
+          <div class="rpm-hero-main sleep-hero-main">
+            <div class="sleep-hero-badge">
+              MAKE HEALTHCARE ACCESSIBLE &amp; ACCURATE
+            </div>
+
+            <h1 class="sleep-hero-title">
+              <span class="title-line-1">Clinical-Grade</span>
+              <span class="title-line-2"><strong>Sleep Testing,</strong> From</span>
+              <span class="title-line-3">The Comfort Of Home.</span>
+            </h1>
+
+            <div class="sleep-hero-btn-group">
+              <a href="#footer" class="btn btn-sleep-primary">Get in Touch</a>
+              <a href="#solutions" class="btn btn-sleep-outline">Explore Products</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Sleep Apnea Overview -->
+          <div class="rpm-hero-side-card sleep-hero-side-card">
+            <h2 class="sleep-side-title">Sleep Apnea</h2>
+            <p class="sleep-side-desc">
+              MG Health Tech Helps Healthcare Providers Create Seamless, Reliable, And Patient-Centered Experiences That Support Better Outcomes And Sustainable Growth.
+            </p>
+            
+            <div class="sleep-hero-moon-phases">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 1 0 22 12H12V2Z" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 0 1 12 22V2Z" fill="#ffffff"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row: 3 Visual Showcase Cards -->
+        <div class="rpm-hero-cards-grid sleep-hero-cards-grid">
+          
+          <!-- Card 1: Wrist Sleep Device -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/sleep-hero-device.png" alt="Clinical-grade wrist sleep monitor and finger pulse sensor" class="rpm-hero-card-img">
+          </div>
+
+          <!-- Card 2: Patient Sleeping in Bed -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/sleep-hero-sleeping.png" alt="Patient comfortably sleeping at home while wearing VitalWeave monitor" class="rpm-hero-card-img">
+          </div>
+
+          <!-- Card 3: Mobile Telemetry Dashboard -->
+          <div class="rpm-hero-card sleep-hero-card">
+            <img src="assets/sleep-hero-dashboard.png" alt="Patient sleeping with smartphone displaying overnight sleep study metrics" class="rpm-hero-card-img">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SOLUTION SECTION: WHY CHOOSE VITALWEAVE SOLUTIONS? -->
+    <section class="rpm-solution-section sleep-solutions-section" id="solutions">
+      <div class="section-container">
+        
+        <div class="sleep-solutions-grid">
+          
+          <!-- Left Column: Title & Lead Text -->
+          <div class="sleep-solutions-left">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">SOLUTION</span>
+            </div>
+
+            <h2 class="sleep-solutions-heading">
+              Why Choose<br>
+              <strong>VitalWeave Solutions?</strong>
+            </h2>
+
+            <p class="sleep-solutions-lead">
+              Deliver Connected Healthcare Experiences That Strengthen Patient Relationships, Simplify Care Delivery, And Drive Long-Term Growth.
+            </p>
+          </div>
+
+          <!-- Right Column: 2x2 Feature Matrix with vertical line dividers -->
+          <div class="sleep-solutions-matrix">
+            
+            <!-- Item 1 -->
+            <div class="sleep-solution-item">
+              <h3 class="sleep-item-title">Deliver Device To<br>The Door Step</h3>
+              <p class="sleep-item-desc">Patient Receives The Compact VitalWeave<sup class="registered-symbol">®</sup> Wearable For Home Use.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="sleep-solution-item">
+              <h3 class="sleep-item-title">Overnight<br>Sleep Study</h3>
+              <p class="sleep-item-desc">Reduce Complexity Through Streamlined Workflows</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="sleep-solution-item">
+              <h3 class="sleep-item-title">Automated HSTA<br>Reporting</h3>
+              <p class="sleep-item-desc">Sleep Study Data Compiles Into High-Precision Diagnostic Metrics (AHI, ODI, And Sleep Architecture).</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="sleep-solution-item">
+              <h3 class="sleep-item-title">Targeted Care<br>&amp; Treatment</h3>
+              <p class="sleep-item-desc">Clinicians Review Automated Reports To Inform Diagnosis And Guide Follow-Up Care.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PRODUCT FEATURE SECTION: EXPLORE VITALWEAVE -->
+    <section class="rpm-ecosystem-section sleep-features-section" id="features">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="sleep-features-header">
+          <div class="section-pill-badge">
+            <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+            <span class="badge-text">PRODUCT FEATURE</span>
+          </div>
+
+          <h2 class="sleep-features-heading">Explore VitalWeave</h2>
+          
+          <p class="sleep-features-subheading">
+            VitalWeave Is A Wearable Pulse Oximeter Designed For Continuous Monitoring Of SpO₂, Pulse Rate And Motion, With Support For Extended And Overnight Monitoring.
+          </p>
+        </div>
+
+        <!-- 6 Feature Cards Grid -->
+        <div class="sleep-features-grid">
+          
+          <!-- Feature 1: Continuous SpO2 -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-spo2.png" alt="Continuous SpO2 Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Continuous SpO₂</h3>
+            <p class="sleep-feature-desc">Track Blood Oxygen Levels Continuously For Clearer Long-Term Monitoring Insights.</p>
+          </div>
+
+          <!-- Feature 2: Pulse Rate Tracking -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-pulse.png" alt="Pulse Rate Tracking Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Pulse Rate Tracking</h3>
+            <p class="sleep-feature-desc">Monitor Pulse-Rate Changes Continuously Alongside Oxygen Levels For Better Visibility.</p>
+          </div>
+
+          <!-- Feature 3: Motion Monitoring -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-motion.png" alt="Motion Monitoring Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Motion Monitoring</h3>
+            <p class="sleep-feature-desc">Capture Movement Information Alongside Vital Measurements Throughout The Monitoring Period.</p>
+          </div>
+
+          <!-- Feature 4: Overnight Monitoring -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-overnight.png" alt="Overnight Monitoring Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Overnight Monitoring</h3>
+            <p class="sleep-feature-desc">Designed For Extended Monitoring, Including Comfortable All-Night Measurement During Sleep.</p>
+          </div>
+
+          <!-- Feature 5: Smart Health Alerts -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-alerts.svg" alt="Smart Health Alerts Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Smart Health Alerts</h3>
+            <p class="sleep-feature-desc">Receive Vibration Reminders When Configured Oxygen Or Pulse Thresholds Change.</p>
+          </div>
+
+          <!-- Feature 6: Connected Data -->
+          <div class="sleep-feature-card">
+            <div class="sleep-feature-icon-wrapper">
+              <img src="assets/sleep-icon-data.png" alt="Connected Data Icon" class="sleep-feature-icon-img">
+            </div>
+            <h3 class="sleep-feature-title">Connected Data</h3>
+            <p class="sleep-feature-desc">Manage And Review Recorded Monitoring Data Through VitalWeave Cloud And Platforms.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. JOURNEY SECTION: THE VITALWEAVE JOURNEY -->
+    <section class="rpm-journey-section sleep-journey-section" id="journey">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">JOURNEY</span>
+        </div>
+
+        <h2 class="sleep-journey-heading">The VitalWeave Journey</h2>
+
+        <div class="sleep-journey-layout">
+          
+          <!-- Left Visual Card -->
+          <div class="sleep-journey-visual">
+            <div class="sleep-journey-card-frame">
+              <img src="assets/sleep-journey.png" alt="Patient sleeping with VitalWeave mobile sleep tracking app" class="sleep-journey-img">
+            </div>
+          </div>
+
+          <!-- Right 2x2 Step Process -->
+          <div class="sleep-journey-steps-grid">
+            
+            <!-- Step 1: WEAR -->
+            <div class="sleep-journey-step">
+              <span class="sleep-step-tag">WEAR</span>
+              <h3 class="sleep-step-title">Continuous Monitoring</h3>
+              <p class="sleep-step-desc">Wear Check O2 Max Comfortably For Longer Monitoring Sessions, Including Overnight Use.</p>
+            </div>
+
+            <!-- Step 2: MONITOR -->
+            <div class="sleep-journey-step">
+              <span class="sleep-step-tag">MONITOR</span>
+              <h3 class="sleep-step-title">Track More Than One Vital</h3>
+              <p class="sleep-step-desc">Continuously Monitor SpO₂, Pulse Rate And Motion For A Broader View Of Vital Changes.</p>
+            </div>
+
+            <!-- Step 3: CONNECT -->
+            <div class="sleep-journey-step">
+              <span class="sleep-step-tag">CONNECT</span>
+              <h3 class="sleep-step-title">Bring Your Data Together</h3>
+              <p class="sleep-step-desc">Connect Check O2 Max With The VitalWeave App To Manage And Access Recorded Monitoring Data.</p>
+            </div>
+
+            <!-- Step 4: REVIEW -->
+            <div class="sleep-journey-step">
+              <span class="sleep-step-tag">REVIEW</span>
+              <h3 class="sleep-step-title">Turn Data Into Clearer Insights</h3>
+              <p class="sleep-step-desc">Review Recorded Vital Data, Trends And Historical Measurements Through Connected App.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. USE CASE SECTION: APPLICATION SCENARIOS -->
+    <section class="rpm-usecases-section sleep-scenarios-section" id="scenarios">
+      <div class="section-container">
+        
+        <div class="section-pill-badge">
+          <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+          <span class="badge-text">USE CASE</span>
+        </div>
+
+        <h2 class="sleep-scenarios-heading">Application Scenarios</h2>
+
+        <div class="sleep-scenarios-layout">
+          
+          <!-- Left Visual Card -->
+          <div class="sleep-scenarios-visual">
+            <div class="sleep-scenarios-card-frame">
+              <img src="assets/sleep-scenario-arm.png" alt="Wrist sleep monitor with pulse oximeter finger sensor" class="sleep-scenarios-img">
+            </div>
+          </div>
+
+          <!-- Right 2x2 Use Case Grid -->
+          <div class="sleep-scenarios-grid">
+            
+            <!-- Scenario 1: In-Depth Sleep Study -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/sleep-scenario-sleep.png" alt="In-Depth Sleep Study (HSTA) Reports Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">In-Depth Sleep Study (HSTA) Reports</h3>
+              <p class="sleep-scenario-desc">Actionable Home Sleep Testing Analytics<br>And Automated Scoring Delivered Directly<br>To Healthcare Providers.</p>
+            </div>
+
+            <!-- Scenario 2: Clinical Precision -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/sleep-scenario-clinical.png" alt="Clinical Precision Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">Clinical Precision</h3>
+              <p class="sleep-scenario-desc">Tracks Sleep Architecture, AHI (Apnea-Hypopnea Index), And Respiratory Events<br>For Precise Diagnosis And Management.</p>
+            </div>
+
+            <!-- Scenario 3: At-Home Convenience -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/sleep-scenario-home.png" alt="At-Home Convenience Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">At-Home Convenience</h3>
+              <p class="sleep-scenario-desc">Patients Conduct Their Sleep Study In Their<br>Own Bed, Capturing Authentic Sleep<br>Patterns.</p>
+            </div>
+
+            <!-- Scenario 4: Movement & Alerts -->
+            <div class="sleep-scenario-item">
+              <div class="sleep-scenario-icon-box">
+                <img src="assets/sleep-scenario-alerts.png" alt="Movement-Activity & Abnormal Alerts Icon" class="sleep-scenario-icon-img">
+              </div>
+              <h3 class="sleep-scenario-title">Movement-Activity &amp; Abnormal Alerts</h3>
+              <p class="sleep-scenario-desc">Sleep/Wake Detection To Evaluate Overall Sleep<br>Quality And Disturbances, With Instant Flagging<br>Of Key Cardiac And Respiratory Anomalies.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. IMMERSIVE CTA BANNER SECTION -->
+    <section class="rpm-cta-section" id="cta">
+      <div class="rpm-cta-overlay"></div>
+      <div class="rpm-cta-content">
+        <h2 class="rpm-cta-heading">
+          Build Better Care Around Continuous<br class="desktop-br">
+          Patient Health Insights
+        </h2>
+        <p class="rpm-cta-subheading">
+          Discover Connected VitalWeave Monitoring That Helps Healthcare Teams Track Vital Changes, Support Better Decisions, And Improve Patient Care.
+        </p>
+        
+        <div class="rpm-cta-btn-wrapper">
+          <a href="#footer" class="btn btn-rpm-talk">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER SECTION -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Top Columns Grid -->
+      <div class="footer-main-grid">
+        
+        <!-- Company Info & Social Links -->
+        <div class="footer-brand-column">
+          <div class="footer-logo-wrapper">
+            <img src="assets/footer-logo.png" alt="MG Health Tech Logo" class="footer-logo-img">
+          </div>
+          <p class="footer-mission-text">
+            Making healthcare accessible and accurate through connected, patient-centered technology.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 1: Company -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#about" class="footer-link">About Us</a></li>
+            <li><a href="index.html#investors" class="footer-link">Investors</a></li>
+            <li><a href="index.html#events" class="footer-link">Events</a></li>
+            <li><a href="index.html#careers" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Products -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#overview" class="footer-link">VitalWeave Device</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">RPM &amp; Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Apnea</a></li>
+            <li><a href="cardiovascular-ecg.html" class="footer-link">Cardiovascular ECG</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-link">AI/ML &amp; Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="rpm-chronic-care.html" class="footer-link">Remote Monitoring</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Testing (HSAT)</a></li>
+            <li><a href="index.html#resources" class="footer-link">Resources</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          Copyright &copy; 2026 by MG Health Tech. All rights reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script for Navigation Dropdown & Mobile Menu -->
+  <script src="main.js"></script>
+</body>
+</html>

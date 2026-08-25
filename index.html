@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalWeave® | Connected Real-Time Health Monitoring</title>
+  <meta name="description" content="VitalWeave connects remote health monitoring with clinical workflows. Real-time tracking of Blood Pressure, Pulse Rate, SpO2, and Activity for individuals and clinicians.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=Outfit:wght@200;300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="VitalWeave Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+        </div>
+        <span class="brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" id="productsDropdownBtn" aria-expanded="false" aria-haspopup="true">
+              Products
+              <svg class="dropdown-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" id="productsDropdownMenu" role="menu" aria-labelledby="productsDropdownBtn">
+              <a href="#overview" class="dropdown-item current-page" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <img src="assets/overview-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">VitalWeave Device</span>
+                  <span class="dropdown-item-desc">Wearable real-time biosensing cuff</span>
+                </div>
+              </a>
+              <a href="rpm-chronic-care.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon rpm-icon-bg">
+                  <img src="assets/rpm-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">RPM &amp; Chronic Care</span>
+                  <span class="dropdown-item-desc">Continuous proactive patient monitoring</span>
+                </div>
+              <a href="sleep-apnea.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon sleep-icon-bg">
+                  <img src="assets/sleep-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Sleep Apnea</span>
+                  <span class="dropdown-item-desc">Clinical-grade at-home sleep testing</span>
+                </div>
+              </a>
+              <a href="cardiovascular-ecg.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon ecg-icon-bg">
+                  <img src="assets/ecg-hero-woman.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Cardiovascular ECG</span>
+                  <span class="dropdown-item-desc">Extended ECG telemetry &amp; AI insights</span>
+                </div>
+              </a>
+              <a href="ai-ml-digital-twin.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon aiml-icon-bg">
+                  <img src="assets/aiml-card-1.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">AI/ML &amp; Digital Twin</span>
+                  <span class="dropdown-item-desc">Intelligent health insights &amp; digital twin models</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+          <li><a href="#parameters" class="nav-link">Outcomes</a></li>
+          <li><a href="#faq" class="nav-link">Resources</a></li>
+          <li><a href="#footer" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="#book-demo" class="btn btn-header" id="getInTouchBtn">Get in Touch</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle" id="mobileProductsToggle" aria-expanded="false">
+            <span>Products</span>
+            <svg class="mobile-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu" id="mobileProductsMenu">
+            <a href="#overview" class="mobile-dropdown-item current">
+              <span class="mobile-dropdown-title">VitalWeave Device</span>
+              <span class="mobile-dropdown-sub">Wearable Vital Signs Monitor</span>
+            </a>
+            <a href="rpm-chronic-care.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">RPM &amp; Chronic Care</span>
+              <span class="mobile-dropdown-sub">Proactive Monitoring Platform</span>
+            </a>
+            <a href="sleep-apnea.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Sleep Apnea</span>
+              <span class="mobile-dropdown-sub">Clinical-Grade Sleep Testing</span>
+            </a>
+            <a href="cardiovascular-ecg.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Cardiovascular ECG</span>
+              <span class="mobile-dropdown-sub">Extended ECG Monitoring</span>
+            </a>
+            <a href="ai-ml-digital-twin.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">AI/ML &amp; Digital Twin</span>
+              <span class="mobile-dropdown-sub">Intelligent Digital Twin &amp; Analysis</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#use-cases" class="mobile-nav-link">Use Cases</a></li>
+        <li><a href="#parameters" class="mobile-nav-link">Outcomes</a></li>
+        <li><a href="#faq" class="mobile-nav-link">Resources</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Company</a></li>
+        <li class="mobile-action-item">
+          <a href="#book-demo" class="btn btn-primary btn-mobile-cta">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Hero Header Row -->
+        <div class="hero-top-row">
+          
+          <!-- Left Column -->
+          <div class="hero-left-content">
+            <span class="hero-badge">Connected Vital Monitoring</span>
+            <h1 class="hero-title">
+              <span class="font-normal">Smarter</span> Real-Time<br>
+              Health Monitoring<br>
+              <span class="font-normal">with VitalWeave</span>
+            </h1>
+            
+            <div class="hero-cta-group">
+              <a href="#download-app" class="btn btn-hero-primary">
+                Download
+              </a>
+              <a href="#overview" class="btn btn-hero-secondary">
+                Explore Products
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="hero-right-content">
+            <h2 class="hero-brand-title">VitalWeave<span class="registered-symbol-large">®</span></h2>
+            <p class="hero-tagline">
+              Real-time vital tracking helps individuals stay informed and clinicians act proactively.
+            </p>
+            <div class="hero-tagline-status">
+              <img src="assets/icon-tagline-dots.svg" alt="Indicator status lights" class="status-dots-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Feature Showcase Cards (3 Cards) -->
+        <div class="hero-cards-grid">
+          
+          <!-- Showcase Card 1: Patient Wearing Cuff -->
+          <div class="hero-showcase-card hero-card-1">
+            <div class="card-image-wrapper">
+              <img src="assets/hero-patient.png" alt="Patient comfortably wearing VitalWeave health monitor on arm at home" class="hero-card-img">
+            </div>
+          </div>
+
+          <!-- Showcase Card 2: Mobile App Sync Screens -->
+          <div class="hero-showcase-card hero-card-2">
+            <div class="card-image-wrapper">
+              <img src="assets/hero-phones.png" alt="VitalWeave mobile application displaying real-time biometric metrics" class="hero-card-img">
+            </div>
+          </div>
+
+          <!-- Showcase Card 3: Clinician Remote Dashboard -->
+          <div class="hero-showcase-card hero-card-3">
+            <div class="card-image-wrapper">
+              <img src="assets/hero-doctor.png" alt="Healthcare professional monitoring patient trends on clinical dashboard" class="hero-card-img">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="overview-section" id="overview">
+      <div class="section-container">
+        
+        <div class="overview-grid">
+          
+          <!-- Left Details -->
+          <div class="overview-text-content">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">Overview</span>
+            </div>
+
+            <h2 class="overview-main-heading">
+              Overview of <strong>VitalWeave</strong>
+            </h2>
+
+            <h3 class="overview-subheading">
+              Your Partner in Proactive Patient Care
+            </h3>
+
+            <p class="overview-description">
+              VitalWeave is a compact, wearable device designed to monitor key vital parameters in real time. Developed with comfort, accuracy, and reliability in mind, it helps healthcare professionals observe patients' vital trends and respond at the right time. VitalWeave measures pulse rate, oxygen saturation (SpO2), blood pressure, and activity levels, providing continuous insights that support early detection and better clinical decision-making.
+            </p>
+          </div>
+
+          <!-- Right Product Card -->
+          <div class="overview-product-showcase">
+            <div class="overview-product-card">
+              <img src="assets/overview-device.png" alt="VitalWeave smart wearable biosensing arm cuff device" class="overview-product-img">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCT FEATURES / VITAL PARAMETERS SECTION -->
+    <section class="parameters-section" id="parameters">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-split">
+          <div class="header-left">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">Product Feature</span>
+            </div>
+            <h2 class="section-heading">
+              Vital Parameters<br>
+              Monitored by <strong>VitalWeave</strong>
+            </h2>
+          </div>
+          <div class="header-right">
+            <p class="section-lead-text">
+              VitalWeave connects remote health monitoring with clinical workflows to help providers deliver continuous, personalized, and proactive chronic care.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Vital Parameters Grid -->
+        <div class="parameters-grid">
+          
+          <!-- Parameter 1: Blood Pressure -->
+          <div class="parameter-card">
+            <div class="phone-mockup-wrapper">
+              <img src="assets/bp-screen.png" alt="Blood Pressure continuous tracking interface on mobile" class="phone-screen-img">
+            </div>
+            <div class="parameter-info">
+              <h3 class="parameter-title">Blood Pressure</h3>
+              <p class="parameter-desc">Reliable BP tracking for<br>confident care</p>
+            </div>
+          </div>
+
+          <!-- Parameter 2: Pulse Rate -->
+          <div class="parameter-card">
+            <div class="phone-mockup-wrapper">
+              <img src="assets/pulse-screen.png" alt="Real-time pulse rate heart monitor interface" class="phone-screen-img">
+            </div>
+            <div class="parameter-info">
+              <h3 class="parameter-title">Pulse Rate</h3>
+              <p class="parameter-desc">Precision in pulse rate tracking<br>for better care</p>
+            </div>
+          </div>
+
+          <!-- Parameter 3: Oxygen Saturation -->
+          <div class="parameter-card">
+            <div class="phone-mockup-wrapper">
+              <img src="assets/spo2-screen.png" alt="SpO2 Oxygen saturation trends interface" class="phone-screen-img">
+            </div>
+            <div class="parameter-info">
+              <h3 class="parameter-title">Oxygen Saturation</h3>
+              <p class="parameter-desc">Precise oxygen level monitoring<br>for better decisions</p>
+            </div>
+          </div>
+
+          <!-- Parameter 4: Activity -->
+          <div class="parameter-card">
+            <div class="phone-mockup-wrapper">
+              <img src="assets/activity-screen.png" alt="Daily activity and movement metric tracking interface" class="phone-screen-img">
+            </div>
+            <div class="parameter-info">
+              <h3 class="parameter-title">Activity</h3>
+              <p class="parameter-desc">Activity insights for<br>improved health</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM SECTION: CONNECTED HEALTH CARE -->
+    <section class="ecosystem-section" id="ecosystem">
+      <div class="section-container">
+        
+        <!-- Header -->
+        <div class="ecosystem-header">
+          <div class="section-pill-badge">
+            <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+            <span class="badge-text">VitalWeave Ecosystem</span>
+          </div>
+          <h2 class="section-heading">A Connected Health Care</h2>
+          <p class="ecosystem-subtitle">Empowering Clinicians, Engaging Patients - One Intelligent Platform.</p>
+        </div>
+
+        <!-- Ecosystem 3-step Diagram -->
+        <div class="ecosystem-flow-container">
+          
+          <!-- Step 1: Device -->
+          <div class="ecosystem-item">
+            <div class="ecosystem-media-frame device-frame">
+              <div class="ecosystem-device-holder">
+                <img src="assets/ecosystem-device.png" alt="VitalWeave Armband Device" class="ecosystem-img-device">
+              </div>
+            </div>
+            <div class="ecosystem-caption">
+              <h3 class="ecosystem-title">VitalWeave Device</h3>
+              <p class="ecosystem-desc">A lightweight, biocompatible wearable that continuously tracks pulse, oxygen, BP, and activity.</p>
+            </div>
+          </div>
+
+          <!-- Connector Arrow 1 -->
+          <div class="ecosystem-arrow-wrapper">
+            <img src="assets/arrow-right.svg" alt="" class="flow-arrow-icon" aria-hidden="true">
+          </div>
+
+          <!-- Step 2: App -->
+          <div class="ecosystem-item">
+            <div class="ecosystem-media-frame app-frame">
+              <div class="ecosystem-phone-holder">
+                <img src="assets/vitalweave app iPhone 12 Pro.png" alt="VitalWeave iPhone App" class="ecosystem-img-phone">
+              </div>
+            </div>
+            <div class="ecosystem-caption">
+              <h3 class="ecosystem-title">VitalWeave App</h3>
+              <p class="ecosystem-desc">A secure app for tracking vitals, receiving alerts, and sharing real-time health updates with doctors.</p>
+            </div>
+          </div>
+
+          <!-- Connector Arrow 2 -->
+          <div class="ecosystem-arrow-wrapper">
+            <img src="assets/arrow-right.svg" alt="" class="flow-arrow-icon" aria-hidden="true">
+          </div>
+
+          <!-- Step 3: Web Dashboard -->
+          <div class="ecosystem-item">
+            <div class="ecosystem-media-frame web-frame">
+              <div class="ecosystem-laptop-holder">
+                <img src="assets/vitalweave-laptop-web.png" alt="VitalWeave Clinical Web Dashboard" class="ecosystem-img-laptop">
+              </div>
+            </div>
+            <div class="ecosystem-caption">
+              <h3 class="ecosystem-title">VitalWeave Web</h3>
+              <p class="ecosystem-desc">A clinical interface with real-time data, smart alerts, and insights to support timely care.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DOWNLOAD BANNER SECTION -->
+    <section class="download-banner-section" id="download-app">
+      <div class="download-banner-overlay"></div>
+      <div class="download-banner-content">
+        <h2 class="download-banner-heading">Download The VitalWeave App</h2>
+        <p class="download-banner-subheading">
+          A secure app for tracking vitals, receiving alerts, and sharing real-time health<br class="desktop-br">
+          updates with doctors.
+        </p>
+        
+        <div class="app-buttons-group">
+          <!-- Play Store -->
+          <a href="#download" class="store-badge-btn" id="playstoreBtn">
+            <img src="assets/playstore.svg" alt="" class="store-icon" aria-hidden="true">
+            <span class="store-text">PlayStore</span>
+          </a>
+
+          <!-- App Store -->
+          <a href="#download" class="store-badge-btn" id="appstoreBtn">
+            <img src="assets/apple.svg" alt="" class="store-icon apple-icon" aria-hidden="true">
+            <span class="store-text">App Store</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES SECTION -->
+    <section class="use-cases-section" id="use-cases">
+      <div class="section-container">
+        
+        <!-- Header -->
+        <div class="section-header-split">
+          <div class="header-left">
+            <div class="section-pill-badge">
+              <img src="assets/badge-dot.svg" alt="" class="badge-dot-icon" aria-hidden="true">
+              <span class="badge-text">USE CASES</span>
+            </div>
+            <h2 class="section-heading">
+              Built For <strong>Everyday</strong><br>
+              <strong>Health Awareness and Remote Care</strong>
+            </h2>
+          </div>
+          <div class="header-right">
+            <p class="section-lead-text">
+              VitalWeave connects remote health monitoring with clinical workflows to help providers deliver continuous, personalized, and proactive chronic care.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Use Case Cards Grid -->
+        <div class="use-cases-grid">
+          
+          <!-- Use Case 1: Continuous Wellness Tracking -->
+          <div class="use-case-card">
+            <div class="use-case-image-holder">
+              <img src="assets/usecase-wellness.png" alt="Patient checking wellness statistics on phone" class="use-case-img">
+            </div>
+            <div class="use-case-info-box">
+              <div class="use-case-title-row">
+                <div class="use-case-icon-badge">
+                  <img src="assets/heart-Icon.png" alt="Wellness Heart Icon" class="use-case-icon-img">
+                </div>
+                <h3 class="use-case-name">Continuous Wellness Tracking</h3>
+              </div>
+              <p class="use-case-detail">
+                Supports patients with hypertension, diabetes, and heart disease through continuous monitoring and timely health insights.
+              </p>
+            </div>
+          </div>
+
+          <!-- Use Case 2: Elderly Care & Assisted Living -->
+          <div class="use-case-card">
+            <div class="use-case-image-holder">
+              <img src="assets/usecase-elderly.png" alt="Elderly woman smiling while checking health vitals" class="use-case-img">
+            </div>
+            <div class="use-case-info-box">
+              <div class="use-case-title-row">
+                <div class="use-case-icon-badge">
+                  <img src="assets/pulse-Icon.png" alt="Pulse Monitor Icon" class="use-case-icon-img">
+                </div>
+                <h3 class="use-case-name">Elderly Care &amp; Assisted Living</h3>
+              </div>
+              <p class="use-case-detail">
+                Provides round-the-clock monitoring, fall detection, and improved safety for elderly individuals, ensuring confidence and comfort.
+              </p>
+            </div>
+          </div>
+
+          <!-- Use Case 3: Post-Acute and Home Recovery -->
+          <div class="use-case-card">
+            <div class="use-case-image-holder">
+              <img src="assets/usecase-postacute.png" alt="Recovering patient in bed monitored with VitalWeave" class="use-case-img">
+            </div>
+            <div class="use-case-info-box">
+              <div class="use-case-title-row">
+                <div class="use-case-icon-badge">
+                  <img src="assets/double-heart-Icon.png" alt="Recovery Double Heart Icon" class="use-case-icon-img">
+                </div>
+                <h3 class="use-case-name">Post-Acute and Home Recovery</h3>
+              </div>
+              <p class="use-case-detail">
+                Tracks recovery progress, detects early complications, and enables doctors to monitor patients remotely for better outcomes
+              </p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="section-container">
+        
+        <div class="faq-layout-grid">
+          
+          <!-- Left Visual -->
+          <div class="faq-image-column">
+            <div class="faq-image-card">
+              <img src="assets/faq-sleeping.png" alt="Woman sleeping peacefully while wearing VitalWeave overnight sensor" class="faq-main-img">
+            </div>
+          </div>
+
+          <!-- Right Accordion Content -->
+          <div class="faq-content-column">
+            <h2 class="faq-section-title">Frequently Asked Questions?</h2>
+            
+            <div class="faq-accordion" id="faqAccordion">
+              
+              <!-- FAQ Item 1 (Active by default) -->
+              <div class="faq-item is-active" id="faq-1">
+                <button class="faq-question-btn" aria-expanded="true" aria-controls="faq-ans-1">
+                  <span class="faq-question-text">Who can use VitalWeave?</span>
+                  <span class="faq-toggle-icon">
+                    <img src="assets/icon-faq-close.png" alt="" class="toggle-icon-img" aria-hidden="true">
+                  </span>
+                </button>
+                <div class="faq-answer-pane" id="faq-ans-1">
+                  <p class="faq-answer-text">
+                    VitalWeave can be used by individuals for everyday health tracking and by healthcare providers for remote health monitoring and trend-based insights.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-item" id="faq-2">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2">
+                  <span class="faq-question-text">What vital signs does VitalWeave monitor?</span>
+                  <span class="faq-toggle-icon">
+                    <img src="assets/icon-faq-close.png" alt="" class="toggle-icon-img" aria-hidden="true">
+                  </span>
+                </button>
+                <div class="faq-answer-pane" id="faq-ans-2">
+                  <p class="faq-answer-text">
+                    VitalWeave continuously monitors 4 critical physiological parameters: continuous Blood Pressure (BP), Pulse Rate, Oxygen Saturation (SpO2), and Daily Activity / mobility trends.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-item" id="faq-3">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3">
+                  <span class="faq-question-text">Can VitalWeave be used at home?</span>
+                  <span class="faq-toggle-icon">
+                    <img src="assets/icon-faq-close.png" alt="" class="toggle-icon-img" aria-hidden="true">
+                  </span>
+                </button>
+                <div class="faq-answer-pane" id="faq-ans-3">
+                  <p class="faq-answer-text">
+                    Yes! VitalWeave was designed from the ground up for seamless everyday home wear, post-operative recovery, and independent assisted living scenarios.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-item" id="faq-4">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4">
+                  <span class="faq-question-text">VitalWeave supports remote monitoring?</span>
+                  <span class="faq-toggle-icon">
+                    <img src="assets/icon-faq-close.png" alt="" class="toggle-icon-img" aria-hidden="true">
+                  </span>
+                </button>
+                <div class="faq-answer-pane" id="faq-ans-4">
+                  <p class="faq-answer-text">
+                    Yes, it streams secure biometric updates directly into the clinical portal, allowing doctors and healthcare teams to intervene proactively before complications arise.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-item" id="faq-5">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5">
+                  <span class="faq-question-text">Is the data from VitalWeave secure?</span>
+                  <span class="faq-toggle-icon">
+                    <img src="assets/icon-faq-close.png" alt="" class="toggle-icon-img" aria-hidden="true">
+                  </span>
+                </button>
+                <div class="faq-answer-pane" id="faq-ans-5">
+                  <p class="faq-answer-text">
+                    Data privacy and security are paramount. VitalWeave uses enterprise-grade end-to-end encryption compliant with HIPAA and global medical data privacy standards.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOOK LIVE DEMO BANNER SECTION -->
+    <section class="demo-banner-section" id="book-demo">
+      <div class="demo-banner-overlay"></div>
+      <div class="demo-banner-content">
+        <h2 class="demo-banner-heading">Book A Live Demo</h2>
+        <p class="demo-banner-subheading">
+          Experience how VitalWeave delivers real-time health insights through our smart monitoring device and platform. Schedule a personalized demo to see how it enhances patient care and clinical efficiency.
+        </p>
+        
+        <div class="demo-btn-wrapper">
+          <a href="#footer" class="btn btn-demo-action" id="bookDemoActionBtn">
+            Book Demo
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Top Columns Grid -->
+      <div class="footer-main-grid">
+        
+        <!-- Company Info & Social Links -->
+        <div class="footer-brand-column">
+          <div class="footer-logo-wrapper">
+            <img src="assets/footer-logo.png" alt="MG Health Tech Logo" class="footer-logo-img">
+          </div>
+          <p class="footer-mission-text">
+            Making healthcare accessible and accurate through connected, patient-centered technology.
+          </p>
+          
+          <div class="footer-social-links" aria-label="Social Media Links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="social-svg">
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <img src="assets/icon-facebook.svg" alt="Facebook" class="social-svg">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <img src="assets/icon-instagram.svg" alt="Instagram" class="social-svg">
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <img src="assets/icon-youtube.svg" alt="YouTube" class="social-svg">
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Company -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#overview" class="footer-nav-link">About Us</a></li>
+            <li><a href="#overview" class="footer-nav-link">Investors</a></li>
+            <li><a href="#overview" class="footer-nav-link">Events</a></li>
+            <li><a href="#overview" class="footer-nav-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Products -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Products</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#overview" class="footer-nav-link">AroCord</a></li>
+            <li><a href="#overview" class="footer-nav-link">PulmoSens</a></li>
+            <li><a href="#hero" class="footer-nav-link active-product">VitalWeave</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-nav-link">RPM &amp; Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-nav-link">Sleep Apnea</a></li>
+            <li><a href="cardiovascular-ecg.html" class="footer-nav-link">Cardiovascular ECG</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-nav-link">AI/ML &amp; Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Solutions -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-heading">Solutions</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#use-cases" class="footer-nav-link">Remote Monitoring</a></li>
+            <li><a href="#use-cases" class="footer-nav-link">Chronic Care</a></li>
+            <li><a href="#use-cases" class="footer-nav-link">Patient Engagement</a></li>
+            <li><a href="#faq" class="footer-nav-link">Resources</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Row -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          Copyright &copy; 2026 by MG Health Tech, All right reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

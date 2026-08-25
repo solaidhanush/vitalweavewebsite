@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI/ML &amp; Digital Twin - Intelligent Health Insights | VitalWeave</title>
+  <meta name="description" content="Advance patient care with VitalWeave AI/ML & Digital Twin technology. Continuously monitor cardiac health and multi-parameter signals with 5G/6G connectivity.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Outfit, DM Sans, Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=Outfit:wght@200;300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-aiml-digital-twin">
+
+  <!-- =========================================================================
+       1. GLOBAL HEADER / NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="VitalWeave Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+        </div>
+        <span class="brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Products with Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active-nav" id="productsDropdownBtn" aria-expanded="false" aria-haspopup="true">
+              Products
+              <svg class="dropdown-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" id="productsDropdownMenu" role="menu" aria-labelledby="productsDropdownBtn">
+              <a href="index.html#overview" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <img src="assets/overview-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">VitalWeave Device</span>
+                  <span class="dropdown-item-desc">Wearable real-time biosensing cuff</span>
+                </div>
+              </a>
+              <a href="rpm-chronic-care.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon rpm-icon-bg">
+                  <img src="assets/rpm-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">RPM &amp; Chronic Care</span>
+                  <span class="dropdown-item-desc">Continuous proactive patient monitoring</span>
+                </div>
+              </a>
+              <a href="sleep-apnea.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon sleep-icon-bg">
+                  <img src="assets/sleep-hero-device.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Sleep Apnea</span>
+                  <span class="dropdown-item-desc">Clinical-grade at-home sleep testing</span>
+                </div>
+              </a>
+              <a href="cardiovascular-ecg.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon ecg-icon-bg">
+                  <img src="assets/ecg-hero-woman.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Cardiovascular ECG</span>
+                  <span class="dropdown-item-desc">Extended ECG telemetry &amp; AI insights</span>
+                </div>
+              </a>
+              <a href="ai-ml-digital-twin.html" class="dropdown-item current-page" role="menuitem">
+                <div class="dropdown-item-icon aiml-icon-bg">
+                  <img src="assets/aiml-card-1.png" alt="" class="dropdown-thumb-img">
+                </div>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">AI/ML &amp; Digital Twin</span>
+                  <span class="dropdown-item-desc">Intelligent health insights &amp; digital twin models</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="#solution" class="nav-link">Solution</a></li>
+          <li><a href="#ecosystem" class="nav-link">Product Ecosystem</a></li>
+          <li><a href="#collaboration" class="nav-link">Use Cases</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#footer" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#cta" class="btn btn-header" id="getInTouchBtn">Get in Touch</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle is-active" id="mobileProductsToggle" aria-expanded="true">
+            <span>Products</span>
+            <svg class="mobile-chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu is-open" id="mobileProductsMenu">
+            <a href="index.html#overview" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">VitalWeave Device</span>
+              <span class="mobile-dropdown-sub">Wearable Vital Signs Monitor</span>
+            </a>
+            <a href="rpm-chronic-care.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">RPM &amp; Chronic Care</span>
+              <span class="mobile-dropdown-sub">Proactive Monitoring Platform</span>
+            </a>
+            <a href="sleep-apnea.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Sleep Apnea</span>
+              <span class="mobile-dropdown-sub">Clinical-Grade Sleep Testing</span>
+            </a>
+            <a href="cardiovascular-ecg.html" class="mobile-dropdown-item">
+              <span class="mobile-dropdown-title">Cardiovascular ECG</span>
+              <span class="mobile-dropdown-sub">Extended ECG Monitoring</span>
+            </a>
+            <a href="ai-ml-digital-twin.html" class="mobile-dropdown-item current">
+              <span class="mobile-dropdown-title">AI/ML &amp; Digital Twin</span>
+              <span class="mobile-dropdown-sub">Intelligent Digital Twin &amp; Analysis</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#solution" class="mobile-nav-link">Solution</a></li>
+        <li><a href="#ecosystem" class="mobile-nav-link">Product Ecosystem</a></li>
+        <li><a href="#collaboration" class="mobile-nav-link">Use Cases</a></li>
+        <li><a href="#technology" class="mobile-nav-link">Technology</a></li>
+        <li><a href="#footer" class="mobile-nav-link">Company</a></li>
+        <li class="mobile-action-item">
+          <a href="#cta" class="btn btn-primary btn-mobile-cta">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <main id="main-content">
+    <section class="aiml-hero-section" id="hero">
+      <div class="aiml-hero-container">
+        
+        <!-- Hero Header Row -->
+        <div class="aiml-hero-header-row">
+          
+          <!-- Left Column -->
+          <div class="aiml-hero-left">
+            <span class="aiml-hero-badge">Make Healthcare Accessible &amp; Accurate</span>
+            <h1 class="aiml-hero-title">
+              Advancing <span class="font-light">Patient Care</span><br>
+              Through <span class="aiml-title-highlight">Intelligent</span><br>
+              <span class="aiml-title-highlight">Health Insights</span>
+            </h1>
+
+            <div class="aiml-hero-cta-group">
+              <a href="#cta" class="btn btn-aiml-primary">Get in Touch</a>
+              <a href="#ecosystem" class="btn btn-aiml-secondary">Explore Products</a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="aiml-hero-right">
+            <h2 class="aiml-hero-section-title">AI/ML &amp; Digital Twin</h2>
+            <p class="aiml-hero-description">
+              Monitor heart rhythms continuously <span class="aiml-hero-accent-text">with wearable ECG technology and intelligent insights</span> for better cardiac care across every patient monitoring journey.
+            </p>
+            <div class="aiml-hero-phases-indicator">
+              <img src="assets/aiml-phases-dots.svg" alt="Phases indicator" class="aiml-phases-icon">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Center Hero Banner Image -->
+        <div class="aiml-hero-banner-frame">
+          <div class="aiml-hero-banner-inner">
+            <img src="assets/aiml-hero-banner.png" alt="Patient undergoing advanced digital twin monitoring with continuous vital telemetry" class="aiml-hero-banner-img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SOLUTION SECTION (Proactive Care, Powered by Intelligence)
+         ========================================================================= -->
+    <section class="aiml-solution-section" id="solution">
+      <div class="aiml-container">
+        <div class="aiml-solution-grid">
+          
+          <!-- Left Content -->
+          <div class="aiml-solution-content">
+            <div class="aiml-badge-pill">
+              <img src="assets/aiml-badge-dot.svg" alt="" class="aiml-badge-dot">
+              <span class="aiml-badge-text">SOLUTION</span>
+            </div>
+
+            <h2 class="aiml-solution-heading">
+              Proactive Care,<br>
+              <strong>Powered by Intelligence</strong>
+            </h2>
+
+            <p class="aiml-solution-body">
+              At MG Health Tech, we combine AI, machine learning, and digital twin technology to help clinicians move from reactive treatment to proactive care. Our platform, VitalWeave™, continuously captures non-invasive patient data over high-speed 5G/6G networks, using AI and machine learning to detect meaningful health changes and surface patient-specific patterns as they emerge.
+            </p>
+          </div>
+
+          <!-- Right Visual -->
+          <div class="aiml-solution-visual">
+            <div class="aiml-solution-image-wrap">
+              <img src="assets/aiml-solution-doctors.png" alt="Clinicians collaborating over real-time patient data" class="aiml-solution-image">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PRODUCT ECOSYSTEM SECTION (Understanding Patient Health in Real Time)
+         ========================================================================= -->
+    <section class="aiml-ecosystem-section" id="ecosystem">
+      <div class="aiml-container">
+        
+        <!-- Header Split -->
+        <div class="aiml-ecosystem-header">
+          <div class="aiml-ecosystem-left">
+            <div class="aiml-badge-pill">
+              <img src="assets/aiml-badge-dot.svg" alt="" class="aiml-badge-dot">
+              <span class="aiml-badge-text">PRODUCT ECOSYSTEM</span>
+            </div>
+            <h2 class="aiml-ecosystem-heading">
+              Understanding<br>
+              <span class="aiml-underlined-text">Patient Health</span> in Real Time
+            </h2>
+          </div>
+
+          <div class="aiml-ecosystem-right">
+            <p class="aiml-ecosystem-lead">
+              Our AI and Digital Twin approach helps create a personalized representation of a patient's physiological state, allowing healthcare teams to better understand changes over time.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Cards Grid -->
+        <div class="aiml-cards-grid">
+          
+          <!-- Card 1 -->
+          <div class="aiml-feature-card">
+            <div class="aiml-card-media">
+              <img src="assets/aiml-card-1.png" alt="Cardiovascular Digital Twin telemetry" class="aiml-card-photo">
+              <div class="aiml-card-overlay-gradient"></div>
+            </div>
+            <div class="aiml-card-content">
+              <div class="aiml-card-title-row">
+                <div class="aiml-card-icon-wrap">
+                  <img src="assets/aiml-icon-card1.svg" alt="" class="aiml-card-icon">
+                </div>
+                <h3 class="aiml-card-title">Cardiovascular Digital Twin</h3>
+              </div>
+              <p class="aiml-card-desc">
+                Create a patient-specific view of cardiovascular health and track changes in heart function over time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="aiml-feature-card">
+            <div class="aiml-card-media">
+              <img src="assets/aiml-card-2.png" alt="AI-Powered ECG Analysis monitor" class="aiml-card-photo">
+              <div class="aiml-card-overlay-gradient"></div>
+            </div>
+            <div class="aiml-card-content">
+              <div class="aiml-card-title-row">
+                <div class="aiml-card-icon-wrap">
+                  <img src="assets/aiml-icon-card2.svg" alt="" class="aiml-card-icon">
+                </div>
+                <h3 class="aiml-card-title">AI-Powered ECG Analysis</h3>
+              </div>
+              <p class="aiml-card-desc">
+                Continuously analyze ECG patterns to identify abnormal heart rhythms and important cardiac changes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="aiml-feature-card">
+            <div class="aiml-card-media">
+              <img src="assets/aiml-card-3.png" alt="Multi-Parameter Health Analysis in clinic" class="aiml-card-photo">
+              <div class="aiml-card-overlay-gradient"></div>
+            </div>
+            <div class="aiml-card-content">
+              <div class="aiml-card-title-row">
+                <div class="aiml-card-icon-wrap">
+                  <img src="assets/aiml-icon-card3.svg" alt="" class="aiml-card-icon">
+                </div>
+                <h3 class="aiml-card-title">Multi-Parameter Health Analysis</h3>
+              </div>
+              <p class="aiml-card-desc">
+                Combine multiple health signals to provide a clearer and more complete view of patient health.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="aiml-feature-card">
+            <div class="aiml-card-media">
+              <img src="assets/aiml-card-4.png" alt="Subtle Pattern Detection clinical team" class="aiml-card-photo">
+              <div class="aiml-card-overlay-gradient"></div>
+            </div>
+            <div class="aiml-card-content">
+              <div class="aiml-card-title-row">
+                <div class="aiml-card-icon-wrap">
+                  <img src="assets/aiml-icon-card4.svg" alt="" class="aiml-card-icon">
+                </div>
+                <h3 class="aiml-card-title">Subtle Pattern Detection</h3>
+              </div>
+              <p class="aiml-card-desc">
+                Identify meaningful health changes and patterns that may not appear in individual readings.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. USE CASES SECTION (Smarter Insights, Better Clinical Collaboration)
+         ========================================================================= -->
+    <section class="aiml-collab-section" id="collaboration">
+      <div class="aiml-container">
+        
+        <!-- Header Split -->
+        <div class="aiml-ecosystem-header">
+          <div class="aiml-ecosystem-left">
+            <div class="aiml-badge-pill">
+              <img src="assets/aiml-badge-dot.svg" alt="" class="aiml-badge-dot">
+              <span class="aiml-badge-text">USE CASES</span>
+            </div>
+            <h2 class="aiml-collab-heading">
+              Smarter Insights,<br>
+              <span class="aiml-underlined-text">Better Clinical Collaboration</span>
+            </h2>
+          </div>
+
+          <div class="aiml-ecosystem-right">
+            <p class="aiml-collab-lead">
+              VitalWeave™ combines AI-powered analysis with expert clinical review, helping specialists work together and make more informed decisions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Specialists Columns -->
+        <div class="aiml-specialists-grid">
+          
+          <!-- Specialist 1: Cardiologists -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame">
+              <img src="assets/aiml-icon-cardiologist.svg" alt="Cardiologists icon" class="aiml-specialist-icon">
+            </div>
+            <h3 class="aiml-specialist-title">Cardiologists</h3>
+            <p class="aiml-specialist-desc">
+              Review ECG and heart health insights, identify abnormal rhythms, and support earlier clinical intervention.
+            </p>
+          </div>
+
+          <!-- Specialist 2: Pulmonologists -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame">
+              <img src="assets/aiml-icon-pulmonologist.svg" alt="Pulmonologists icon" class="aiml-specialist-icon">
+            </div>
+            <h3 class="aiml-specialist-title">Pulmonologists</h3>
+            <p class="aiml-specialist-desc">
+              Review oxygen levels and breathing patterns to better understand respiratory and cardiovascular changes.
+            </p>
+          </div>
+
+          <!-- Specialist 3: Endocrinologists -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame">
+              <img src="assets/aiml-icon-endocrinologist.svg" alt="Endocrinologists icon" class="aiml-specialist-icon">
+            </div>
+            <h3 class="aiml-specialist-title">Endocrinologists</h3>
+            <p class="aiml-specialist-desc">
+              Review glucose and other health trends alongside cardiovascular data for a more complete view of patient health.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. ADVANCED TECHNOLOGY SECTION (Advanced Technology for Better Healthcare)
+         ========================================================================= -->
+    <section class="aiml-tech-section" id="technology">
+      <div class="aiml-container">
+        
+        <!-- Header Split -->
+        <div class="aiml-ecosystem-header">
+          <div class="aiml-ecosystem-left">
+            <div class="aiml-badge-pill">
+              <img src="assets/aiml-badge-dot.svg" alt="" class="aiml-badge-dot">
+              <span class="aiml-badge-text">USE CASE</span>
+            </div>
+            <h2 class="aiml-tech-heading">
+              Advanced Technology<br>
+              <span>for Better Healthcare</span>
+            </h2>
+          </div>
+
+          <div class="aiml-ecosystem-right">
+            <p class="aiml-tech-lead">
+              MG Health Tech builds healthcare technology with interoperability, data security, and regional requirements in mind.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Tech Columns -->
+        <div class="aiml-specialists-grid">
+          
+          <!-- Tech 1: Cardiovascular Digital Twins -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame">
+              <img src="assets/aiml-icon-cardio-twin.svg" alt="Cardiovascular Digital Twins icon" class="aiml-specialist-icon">
+            </div>
+            <h3 class="aiml-specialist-title">Cardiovascular Digital Twins</h3>
+            <p class="aiml-specialist-desc">
+              Create personalized digital models to understand cardiovascular health, track changes, and support more informed clinical decisions.
+            </p>
+          </div>
+
+          <!-- Tech 2: 5G/6G Data Connectivity -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame aiml-tower-icon-wrap">
+              <img src="assets/aiml-ellipse-bg.svg" alt="" class="aiml-tower-bg">
+              <img src="assets/aiml-icon-tower.svg" alt="5G/6G Data Connectivity icon" class="aiml-tower-fg">
+            </div>
+            <h3 class="aiml-specialist-title">5G/6G Data Connectivity</h3>
+            <p class="aiml-specialist-desc">
+              Enable fast, continuous transfer of health data from connected medical devices for real-time monitoring and analysis with greater efficiency.
+            </p>
+          </div>
+
+          <!-- Tech 3: AI-Supported Clinical Decisions -->
+          <div class="aiml-specialist-col">
+            <div class="aiml-specialist-icon-frame">
+              <img src="assets/aiml-icon-ai-decision.svg" alt="AI-Supported Clinical Decisions icon" class="aiml-specialist-icon">
+            </div>
+            <h3 class="aiml-specialist-title">AI-Supported Clinical Decisions</h3>
+            <p class="aiml-specialist-desc">
+              Connect AI-generated insights with cardiologists, pulmonologists, and endocrinologists for collaborative clinical assessment.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. IMMERSIVE CTA BANNER SECTION
+         ========================================================================= -->
+    <section class="rpm-cta-section aiml-cta-section" id="cta">
+      <div class="rpm-cta-overlay"></div>
+      <div class="rpm-cta-content">
+        <h2 class="rpm-cta-heading">
+          Build Better Care Around Continuous<br class="desktop-br">
+          Patient Health Insights
+        </h2>
+        <p class="rpm-cta-subheading">
+          Discover connected VitalWeave monitoring that helps healthcare teams track vital changes, support better decisions, and improve patient care.
+        </p>
+        
+        <div class="rpm-cta-btn-wrapper">
+          <a href="#footer" class="btn btn-rpm-talk">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       8. GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Top Row: Brand & Links -->
+      <div class="footer-top-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand-column">
+          <a href="index.html" class="footer-logo-link">
+            <div class="footer-logo-icon">
+              <img src="assets/logo.png" alt="VitalWeave Logo Icon" class="logo-img">
+            </div>
+            <span class="footer-brand-name">VitalWeave<sup class="registered-symbol">®</sup></span>
+          </a>
+          <p class="footer-brand-description">
+            Making healthcare accessible and accurate through connected, patient-centered technology.
+          </p>
+          
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 1: Company -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#about" class="footer-link">About Us</a></li>
+            <li><a href="index.html#investors" class="footer-link">Investors</a></li>
+            <li><a href="index.html#events" class="footer-link">Events</a></li>
+            <li><a href="index.html#careers" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Products -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#overview" class="footer-link">VitalWeave Device</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">RPM &amp; Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Apnea</a></li>
+            <li><a href="cardiovascular-ecg.html" class="footer-link">Cardiovascular ECG</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-link">AI/ML &amp; Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-links-column">
+          <h4 class="footer-column-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="rpm-chronic-care.html" class="footer-link">Remote Monitoring</a></li>
+            <li><a href="rpm-chronic-care.html" class="footer-link">Chronic Care</a></li>
+            <li><a href="sleep-apnea.html" class="footer-link">Sleep Testing (HSAT)</a></li>
+            <li><a href="ai-ml-digital-twin.html" class="footer-link">Digital Twin Insights</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          Copyright &copy; 2026 by MG Health Tech, All right reserved
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
