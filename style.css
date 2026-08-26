@@ -498,8 +498,8 @@ button {
 /* Mobile Drawer */
 .mobile-nav-drawer {
   display: block;
-  position: fixed;
-  top: var(--header-height);
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: var(--color-primary-navy);
@@ -2888,72 +2888,90 @@ button {
 .rpm-pillar-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 36px;
 }
 
 .rpm-pillar-card {
-  position: relative;
-  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
   overflow: hidden;
-  background-color: #e7f0fa;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .rpm-pillar-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(1, 13, 51, 0.16);
 }
 
-.rpm-pillar-img {
+.rpm-card-media {
   width: 100%;
-  height: auto;
+  height: clamp(380px, 32vw, 470px);
+  position: relative;
+  border-radius: 18.8px;
+  overflow: hidden;
+  background-color: #e7f0fa;
+}
+
+.rpm-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  object-fit: contain;
-  border-radius: var(--radius-lg);
+}
+
+.rpm-card-body {
+  background-color: #e4e3ff;
+  border-radius: 18.8px;
+  padding: 24px 22px;
+  margin-top: -36px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .rpm-pillar-badge-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  width: 100%;
 }
 
 .rpm-pillar-icon-badge {
-  position: relative;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.rpm-vector-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.rpm-vector-icon-dot,
-.rpm-vector-icon-inner {
-  position: absolute;
-}
-
 .rpm-pillar-title {
   font-family: var(--font-heading);
+  font-size: 1.22rem;
   font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--color-black);
+  color: #000000;
   line-height: 1.25;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .rpm-pillar-desc {
   font-family: var(--font-heading);
+  font-size: 1.1rem;
   font-weight: 400;
-  font-size: 1.15rem;
+  color: #000000;
   line-height: 1.45;
-  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 0;
+  text-align: left;
 }
 
 /* 4. Journey Section */
@@ -3945,6 +3963,11 @@ button {
    Cardiovascular ECG Page Specific Styles
    ========================================================================== */
 
+/* Hero Section */
+.ecg-hero-lead-mobile {
+  display: none;
+}
+
 /* Solution Section */
 .ecg-solution-section {
   background-color: #F9F9F7;
@@ -4045,22 +4068,86 @@ button {
 }
 
 .ecg-feature-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .ecg-feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
 }
 
-.ecg-feature-card-full-img {
+.ecg-card-media {
   width: 100%;
-  height: auto;
+  height: clamp(380px, 32vw, 470px);
+  position: relative;
+  border-radius: 18.8px;
+  overflow: hidden;
+  background-color: #e7f0fa;
+}
+
+.ecg-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  border-radius: 20px;
+}
+
+.ecg-card-body {
+  background-color: #e4e3ff;
+  border-radius: 18.8px;
+  padding: 24px 22px;
+  margin-top: -36px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ecg-feature-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.ecg-feature-icon-box {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ecg-feature-title {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.ecg-feature-desc {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #000000;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 /* Journey Section */
@@ -4115,6 +4202,14 @@ button {
   height: 100%;
   object-fit: contain;
   display: block;
+}
+
+.ecg-journey-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .ecg-journey-step-title {
@@ -4341,6 +4436,10 @@ button {
   display: block;
   font-size: clamp(2.2rem, 2.95vw, 44.5px);
   font-weight: 500;
+}
+
+.aiml-hero-lead-mobile {
+  display: none;
 }
 
 .aiml-hero-cta-group {
@@ -4582,6 +4681,10 @@ button {
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
@@ -4591,7 +4694,7 @@ button {
 
 .aiml-card-media {
   width: 100%;
-  height: clamp(400px, 33vw, 480px);
+  height: clamp(380px, 32vw, 470px);
   position: relative;
   border-radius: 18.8px;
   overflow: hidden;
@@ -4604,13 +4707,6 @@ button {
   object-fit: cover;
   object-position: center top;
   display: block;
-}
-
-.aiml-card-overlay-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
-  pointer-events: none;
 }
 
 .aiml-card-content {
@@ -4631,6 +4727,7 @@ button {
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
+  width: 100%;
 }
 
 .aiml-card-icon-wrap {
@@ -4654,6 +4751,8 @@ button {
   font-weight: 600;
   color: #000000;
   line-height: 1.25;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .aiml-card-desc {
@@ -4662,6 +4761,8 @@ button {
   font-weight: 400;
   color: #000000;
   line-height: 1.45;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 /* Use Cases Specialists Section */
@@ -4735,6 +4836,14 @@ button {
   width: 46px;
   height: 46px;
   object-fit: contain;
+}
+
+.aiml-specialist-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .aiml-specialist-title {
@@ -5087,6 +5196,10 @@ button {
 
 /* --- Tablets & Medium Devices (max-width: 992px) --- */
 @media (max-width: 992px) {
+  :root {
+    --header-height: 74px;
+  }
+
   .site-header {
     height: 74px;
   }
@@ -5118,6 +5231,7 @@ button {
   .ecg-ecosystem-header,
   .aiml-solution-grid,
   .aiml-ecosystem-header,
+  .aiml-cards-grid,
   .aiml-tech-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -5427,18 +5541,70 @@ button {
   }
 
   .rpm-pillar-card {
-    background-color: #e4e3ff;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: none;
-    padding: 0;
+    width: 100% !important;
+    background-color: #e4e3ff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 20px !important;
+    padding: 24px 20px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
 
-  .rpm-pillar-img {
+  .rpm-card-media {
+    display: none !important;
+  }
+
+  .rpm-card-body {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .rpm-pillar-badge-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
     width: 100%;
-    height: auto;
-    display: block;
+  }
+
+  .rpm-pillar-icon-badge {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rpm-pillar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00071c;
+    line-height: 1.25;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .rpm-pillar-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #515050;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
   }
 
   /* 4. Journey Section (Figma 537:225) */
@@ -6261,29 +6427,1050 @@ button {
     text-align: left;
   }
 
-  /* Solutions Pages Multi-Card Grids Collapse on Mobile */
-  .ecg-features-grid,
-  .ecg-journey-cards-grid,
-  .aiml-cards-grid,
-  .aiml-specialists-grid,
-  .aiml-collab-grid {
-    grid-template-columns: 1fr;
+  /* ==========================================================================
+     Cardiovascular ECG Mobile Styles (Figma 552:162)
+     ========================================================================== */
+  /* 1. Hero Section (Figma 554:204) */
+  .ecg-hero-section {
+    padding: 40px 0 60px;
+    background-color: #010d33;
+  }
+
+  .ecg-hero-section .sleep-hero-top-row {
+    display: flex;
+    flex-direction: column;
     gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .ecg-hero-section .sleep-hero-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .ecg-hero-section .sleep-hero-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  .ecg-hero-section .sleep-hero-title {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ecg-hero-section .sleep-hero-title .title-line-1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .ecg-hero-section .sleep-hero-title .title-line-2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .ecg-hero-section .sleep-hero-title .title-line-2 strong {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .ecg-hero-section .sleep-hero-title .title-line-3 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .ecg-hero-lead-mobile {
+    display: block !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .ecg-hero-section .sleep-hero-side-card {
+    display: none !important;
+  }
+
+  .ecg-hero-section .sleep-hero-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .ecg-hero-section .sleep-hero-card {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #0b1847;
+    box-shadow: none;
+  }
+
+  .ecg-hero-section .sleep-hero-card:nth-child(3) {
+    display: none !important;
+  }
+
+  .ecg-hero-section .sleep-hero-card .rpm-hero-card-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 16px;
+    display: block;
+  }
+
+  /* 2. Solution Section (Figma 554:220) */
+  .ecg-solution-section {
+    padding: 48px 0;
+    background-color: #f9f9f7;
+  }
+
+  .ecg-solution-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ecg-solution-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .ecg-solution-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .ecg-solution-desc {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    text-align: left;
     max-width: 100%;
   }
 
-  /* Solutions CTA Button Groups Full-Width Stacking */
-  .aiml-hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
+  .ecg-solution-visual {
     width: 100%;
-    gap: 14px;
+  }
+
+  .ecg-solution-card-frame {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-left: 0;
+    box-shadow: none;
+  }
+
+  .ecg-solution-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+  }
+
+  /* 3. Product Ecosystem Section (Figma 554:228) */
+  .ecg-ecosystem-section {
+    padding: 48px 0;
+    background-color: var(--color-white);
+  }
+
+  .ecg-ecosystem-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .ecg-ecosystem-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    text-align: left;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .ecg-heading-underline {
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: #515050;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+    color: #515050;
+  }
+
+  .ecg-ecosystem-lead {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #515050;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .ecg-features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .ecg-feature-card {
+    background-color: #e4e3ff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .ecg-card-media {
+    display: none !important;
+  }
+
+  .ecg-card-body {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    position: static !important;
+  }
+
+  .ecg-feature-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .ecg-feature-icon-box {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ecg-feature-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00071c;
+    margin-bottom: 0;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .ecg-feature-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #515050;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* 4. Journey Section (Figma 554:265) */
+  .ecg-journey-section {
+    padding: 48px 0;
+    background-color: var(--color-white);
+  }
+
+  .ecg-journey-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .ecg-journey-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 24px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .ecg-journey-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .ecg-journey-card {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .ecg-journey-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 2px;
+    overflow: hidden;
+  }
+
+  .ecg-journey-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .ecg-journey-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ecg-journey-step-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00071c;
+    margin-bottom: 0;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .ecg-journey-step-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* 5. Comparison Table / Outcomes Section (Figma 554:325 & 552:662) */
+  .ecg-comparison-section {
+    padding: 48px 0 20px;
+    background-color: var(--color-white);
+  }
+
+  .ecg-comparison-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+
+  .ecg-comparison-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .ecg-table-wrapper {
+    overflow: visible;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .ecg-comparison-table {
+    min-width: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    border: none;
+  }
+
+  .ecg-comparison-table thead {
+    display: none;
+  }
+
+  .ecg-comparison-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .ecg-comparison-table tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    background-color: #f9f9f7;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .cell-feature {
+    width: 100%;
+    background-color: #e4e3ff;
+    border-bottom: 1px solid #d4d2f8;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    text-align: left;
+    display: block;
+  }
+
+  .cell-feature::before {
+    content: "Feature";
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    opacity: 0.8;
+  }
+
+  .cell-traditional {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
+    line-height: 1.45;
+    border-bottom: 1px solid #edf2f7;
+    text-align: left;
+    display: block;
+  }
+
+  .cell-traditional::before {
+    content: "Monitoring Capability";
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+  }
+
+  .cell-vitalweave {
+    width: 100%;
+    padding: 10px 16px 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    border-bottom: none;
+    text-align: left;
+    display: block;
+  }
+
+  .cell-vitalweave::before {
+    content: "VitalWeave";
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+  }
+
+  /* 6. Use Cases Section (Figma 554:357) */
+  .ecg-usecases-section {
+    padding: 48px 0;
+    background-color: #e4e3ff;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-visual {
+    width: 100%;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-card-frame {
+    width: 100%;
+    height: 476px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 22px;
+    display: block;
+  }
+
+  .ecg-usecases-section .sleep-scenarios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .ecg-usecases-section .sleep-scenario-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ecg-usecases-section .sleep-scenario-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .ecg-usecases-section .sleep-scenario-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .ecg-usecases-section .sleep-scenario-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00071c;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .ecg-usecases-section .sleep-scenario-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+  }
+
+  /* 7. CTA Banner Section (Figma 554:392) */
+  .ecg-cta-section {
+    padding: 64px 20px;
+    text-align: left;
+  }
+
+  /* ==========================================================================
+     AI/ML & Digital Twin Mobile Styles (Figma 552:663)
+     ========================================================================== */
+  /* 1. Hero Section (Figma 554:479) */
+  .aiml-hero-section {
+    padding: 40px 0 60px;
+    background-color: #010d33;
+  }
+
+  .aiml-hero-container {
+    padding: 0 24px;
+  }
+
+  .aiml-hero-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .aiml-hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .aiml-hero-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  .aiml-hero-title {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-transform: none;
+  }
+
+  .aiml-hero-title .title-line-1,
+  .aiml-hero-title .title-line-2,
+  .aiml-hero-title .title-line-3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .aiml-hero-title .title-line-1 .title-medium,
+  .aiml-hero-title .title-line-2 .highlight-word {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .aiml-hero-lead-mobile {
+    display: block !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .aiml-hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
   }
 
   .btn-aiml-primary,
   .btn-aiml-secondary {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+
+  .aiml-hero-right {
+    display: none !important;
+  }
+
+  .aiml-hero-banner-frame {
     width: 100%;
-    min-width: unset;
+    height: 210px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-top: 24px;
+    box-shadow: none;
+  }
+
+  .aiml-hero-banner-inner {
+    width: 100%;
+    height: 100%;
+  }
+
+  .aiml-hero-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+
+  /* 2. Solution Section (Figma 554:495) */
+  .aiml-solution-section {
+    padding: 48px 0;
+    background-color: #f9f9f7;
+  }
+
+  .aiml-solution-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .aiml-solution-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .aiml-solution-heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .aiml-solution-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .aiml-solution-visual {
+    width: 100%;
+  }
+
+  .aiml-solution-image-wrap {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+
+  .aiml-solution-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+  }
+
+  /* 3. Product Ecosystem Section (Figma 554:503) */
+  .aiml-ecosystem-section {
+    padding: 48px 0;
+    background-color: var(--color-white);
+  }
+
+  .aiml-ecosystem-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .aiml-ecosystem-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    text-align: left;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .aiml-ecosystem-lead {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #515050;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .aiml-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .aiml-feature-card {
+    width: 100%;
+    background-color: #e4e3ff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: none;
+  }
+
+  .aiml-card-media {
+    display: none !important;
+  }
+
+  .aiml-card-content {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .aiml-card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .aiml-card-icon-wrap {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aiml-card-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .aiml-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00071c;
+    line-height: 1.25;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .aiml-card-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #515050;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* 4. Use Cases / Specialists Collaboration Section (Figma 554:539) */
+  .aiml-collab-section {
+    padding: 48px 0;
+    background-color: var(--color-white);
+  }
+
+  .aiml-collab-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .aiml-collab-lead {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #515050;
+    margin-bottom: 24px;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .aiml-specialists-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .aiml-specialist-col {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .aiml-specialist-icon-frame {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 2px;
+    overflow: hidden;
+  }
+
+  .aiml-specialist-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: scale(1.08);
+  }
+
+  .aiml-specialist-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .aiml-specialist-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00071c;
+    margin-bottom: 0;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .aiml-specialist-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* 5. Technology Section (Figma 554:564) */
+  .aiml-tech-section {
+    padding: 48px 0;
+    background-color: #e4e3ff;
+  }
+
+  .aiml-tech-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00071c;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .aiml-tech-lead {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .aiml-tech-icon-frame {
+    background-color: transparent !important;
+  }
+
+  /* 6. CTA Banner Section (Figma 554:580) */
+  .aiml-cta-section {
+    padding: 64px 20px;
+    text-align: left;
   }
 
   /* Legal Pages on Mobile */
@@ -6311,6 +7498,10 @@ button {
 
 /* --- Small Mobile Phones (max-width: 480px) --- */
 @media (max-width: 480px) {
+  :root {
+    --header-height: 64px;
+  }
+
   .site-header {
     height: 64px;
   }
