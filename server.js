@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 4173;
+let port = parseInt(process.env.PORT || 4173, 10);
 const MIME_TYPES = {
   '.html': 'text/html',
   '.css': 'text/css',
@@ -39,15 +39,26 @@ const server = http.createServer((req, res) => {
   });
 });
 
+function startServer(currentPort) {
+  server.listen(currentPort, () => {
+    console.log(`\n🚀 Server is running at: http://localhost:${currentPort}/`);
+    console.log(`   - Home:               http://localhost:${currentPort}/index.html`);
+    console.log(`   - RPM & Chronic Care: http://localhost:${currentPort}/rpm-chronic-care.html`);
+    console.log(`   - Sleep Apnea:        http://localhost:${currentPort}/sleep-apnea.html`);
+    console.log(`   - Cardiovascular ECG: http://localhost:${currentPort}/cardiovascular-ecg.html`);
+    console.log(`   - AI/ML Digital Twin: http://localhost:${currentPort}/ai-ml-digital-twin.html\n`);
+    console.log(`Press Ctrl + C to stop the server anytime.\n`);
+  });
+}
+
 server.on('error', (err) => {
   if (err.code === 'EADDRINUSE') {
-    console.error(`Port ${PORT} is currently in use. You can either close the other process or run with another port like: PORT=5000 node server.js`);
+    console.log(`Port ${port} is in use, trying port ${port + 1}...`);
+    port++;
+    startServer(port);
   } else {
     console.error('Server error:', err);
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-  console.log(`Open RPM & Chronic Care page at http://localhost:${PORT}/rpm-chronic-care.html`);
-});
+startServer(port);

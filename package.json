@@ -1,4 +1,11 @@
 {
+  "name": "vitalweave-website",
+  "version": "1.0.0",
+  "description": "VitalWeave Connected Wearable Health Platform Website",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
   "dependencies": {
     "sharp": "^0.35.3"
   }
